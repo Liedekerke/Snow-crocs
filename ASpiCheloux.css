@@ -1,0 +1,52 @@
+ /* @media (min-width: @screen-sm-min)
+{
+
+}
+
+
+@media (min-width: @screen-md-min)
+{
+
+}
+
+
+@media (min-width: @screen-lg-min)
+{
+
+ } */
+ #titre
+{
+  color:red;
+  font-size: 60px;
+}
+
+/* Pagination links */
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+/* Add a grey background color on mouse-over */
+ .pagination a:hover:not(.active) {background-color: #ddd;}
+
+
+.main-footer{
+
+position: fixed;
+bottom: 0;
+right: 40%;
+}
+
+
+.jumbotron {
+  background-color: black;
+}
