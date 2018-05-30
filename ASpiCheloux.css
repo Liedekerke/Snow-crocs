@@ -1,17 +1,4 @@
- /* @media (min-width: @screen-sm-min)
-{
 
-}
-
-
-@media (min-width: @screen-md-min)
-{
-
-}
-
-
-@media (min-width: @screen-lg-min)
-{
 
  } */
 /* Pagination links */
@@ -162,3 +149,212 @@ form label {
  .marge{
    margin: 10px;
  }
+
+@media only screen and (min-width: 1200px) {
+
+  .main-footer
+  {
+  text-align: center;
+  position: relative;
+  top:280px;
+  }
+
+  .entreelol
+  {
+    text-align: center;
+  }
+  .devienFou{
+
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+
+  .main-footer
+  {
+  text-align: center;
+  position: relative;
+  top:170px;
+  }
+
+  .panel-body img{
+  width: 450px;
+  height: 400px;
+  right: 50%;
+  }
+
+  .entreelol
+  {
+    text-align: center;
+  }
+  #resto1, #resto2
+  {
+    text-align: center;
+  }
+  .devienFou{
+
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main-footer
+  {
+  text-align: center;
+  position: relative;
+  top:390px;
+  }
+  .panel-body img{
+  width: 340px;
+  height: 340px;
+  right: 50%;
+  }
+
+  .entreelol
+  {
+    text-align: center;
+  }
+  .devienFou{
+
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .main-footer
+  {
+  text-align: center;
+  position: relative;
+  top:690px;
+  }
+
+  .container-fluid, .cartouchette{
+    position: relative;
+    top:150px;
+  }
+  .panel-body img{
+  width: 250px;
+  height: 250px;
+  right: 50%;
+  }
+  #bad1{
+    position: relative;
+    left: 80px;
+  }
+  #bad2{
+    position: relative;
+    left: 445px;
+  }
+  #bad3{
+    position: relative;
+    left: 90px;
+  }
+  #bad4{
+    position: relative;
+    left: 70px;
+  }
+  #bad5{
+    position: relative;
+    left: 495px;
+  }
+  #bad6{
+    position: relative;
+    left: 430px;
+  }
+  #bad7{
+    position: relative;
+    left: 440px;
+  }
+  #contact{
+    position: relative;
+    top: 240px;
+  }
+  .row{
+    position: relative;
+    top: 140px;
+  }
+  textarea{
+    width: 500px;
+  }
+  .devienFou{
+    position: relative;
+    top: 100px;
+    text-align: center;
+  }
+  .entreelol{
+    position: relative;
+    top: 100px;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main-footer
+  {
+  text-align: center;
+  position: relative;
+  top:135px;
+  }
+  .container-fluid, .cartouchette{
+    position: relative;
+    top:150px;
+    text-align: center;
+  }
+  .panel-body img{
+  width: 150px;
+  height: 150px;
+
+  text-align: center;
+  }
+  #bad1{
+    position: relative;
+    left: 60px;
+  }
+  #bad2{
+    position: relative;
+    left: 125px;
+  }
+  #bad3{
+    position: relative;
+    left: 150px;
+  }
+  #bad4{
+    position: relative;
+    left: 54px;
+  }
+  #bad5{
+    position: relative;
+    left: 150px;
+  }
+  #bad6{
+    position: relative;
+    left: 120px;
+  }
+  #bad7{
+    position: relative;
+    left: 125px;
+  }
+.devienFou{
+  position: relative;
+  top:90px;
+  text-align: center;
+}
+.entreelol{
+  position: relative;
+  top:90px;
+  text-align:center;
+}
+.imagee1 img{
+  width: 240px;
+  height: 240px;
+}
+.row{
+  position: relative;
+  top: 130px;
+}
+#contact{
+  position: relative;
+  top: 130px;
+}
+textarea{
+  width: 330px;
+}
+}
