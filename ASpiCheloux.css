@@ -149,7 +149,9 @@ form label {
  .marge{
    margin: 10px;
  }
-
+/* .devienFou{
+  text-align: center;
+} */
 @media only screen and (min-width: 1200px) {
 
   .main-footer
@@ -287,6 +289,9 @@ form label {
   }
 }
 @media only screen and (max-width: 600px) {
+  #FingersMoves{
+    margin: 0;
+  }
   .main-footer
   {
   text-align: center;
