@@ -70,7 +70,7 @@ right: 50%;
  color: white;
   margin: 50px;
 }
-#bad1{
+/* #bad1{
   position: relative;
   left: 193px;
 }
@@ -97,7 +97,7 @@ right: 50%;
 #bad7{
   position: relative;
   left: 80px;
-}
+} */
 .soustitre{
   font-style: italic;
 }
@@ -238,7 +238,7 @@ form label {
   height: 250px;
   right: 50%;
   }
-  #bad1{
+  /* #bad1{
     position: relative;
     left: 80px;
   }
@@ -265,7 +265,7 @@ form label {
   #bad7{
     position: relative;
     left: 440px;
-  }
+  } */
   #contact{
     position: relative;
     top: 240px;
@@ -309,7 +309,7 @@ form label {
 
   text-align: center;
   }
-  #bad1{
+  /* #bad1{
     position: relative;
     left: 60px;
   }
@@ -336,7 +336,7 @@ form label {
   #bad7{
     position: relative;
     left: 125px;
-  }
+  } */
 .devienFou{
   position: relative;
   top:90px;
