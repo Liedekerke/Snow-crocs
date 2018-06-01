@@ -293,6 +293,9 @@ form label {
   #FiveFingers{
     margin:0;
   }
+  .navbar-nav {
+    margin: 0;
+}
 }
 @media only screen and (max-width: 600px) {
   #FingersMoves{
