@@ -290,6 +290,9 @@ form label {
     top: 100px;
     text-align: center;
   }
+  #FiveFingers{
+    margin:0;
+  }
 }
 @media only screen and (max-width: 600px) {
   #FingersMoves{
