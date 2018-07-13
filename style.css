@@ -1,0 +1,338 @@
+/* Pagination links */
+/* .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+/* Style the active/current link */
+/* .pagination a.active { */
+    /* background-color: dodgerblue;
+    color: white;
+} */
+/* Add a grey background color on mouse-over */
+/* .pagination a:hover:not(.active) {background-color: #ddd;} */
+/* HAIDER */
+.titre {
+  color: red;
+  font-size: 90px;
+  text-align: center;
+  font-style: italic; }
+
+.navbar navbar-inverse {
+  text-align: center; }
+
+.jumbotron {
+  background-color: black;
+  height: 200px; }
+
+/* FOOTER */
+.main-footer {
+  text-align: center;
+  color: white; }
+
+/* BBSOLEIL */
+.panel-body img {
+  width: 550px;
+  height: 400px;
+  right: 50%; }
+
+.panel-body {
+  background-color: black; }
+
+.panel-heading {
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  background-color: black; }
+
+#panelOne {
+  display: inline-block;
+  width: 50%;
+  text-align: center; }
+
+#panelTow {
+  display: inline-block;
+  width: 49%;
+  text-align: center; }
+
+/* TINKYWINKY */
+#entree, #plat, #dessert {
+  color: white;
+  margin: 50px; }
+
+/* #bad1{
+  position: relative;
+  left: 193px;
+}
+#bad2{
+  position: relative;
+  left: 107px;
+}
+#bad3{
+  position: relative;
+  left: 200px;
+}
+#bad4{
+  position: relative;
+  left: 178px;
+}
+#bad5{
+  position: relative;
+  left: 128px;
+}
+#bad6{
+  position: relative;
+  left: 108px;
+}
+#bad7{
+  position: relative;
+  left: 80px;
+} */
+.soustitre {
+  font-style: italic; }
+
+/* LAALAA */
+.imagee1 img {
+  width: 400px;
+  height: 300px; }
+
+/* DESSERT */
+.imagee1 img {
+  width: 400px;
+  height: 300px; }
+
+/* PLAT */
+.imagee1 img {
+  width: 400px;
+  height: 300px; }
+
+/* DIPSY */
+p, h1 {
+  color: white; }
+
+#resto1, #resto2 {
+  text-align: center; }
+
+.row {
+  margin: 0; }
+
+/* PO */
+.name {
+  font-size: 20px;
+  display: block;
+  width: 400px;
+  color: white; }
+
+textarea {
+  width: 700px;
+  height: 200px; }
+
+input, button, select, optgroup, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit; }
+
+form label {
+  display: block; }
+
+.marge {
+  margin: 10px; }
+
+/* .devienFou{
+  text-align: center;
+} */
+.padd {
+  padding: 20px; }
+
+@media only screen and (min-width: 1200px) {
+  .main-footer {
+    text-align: center;
+    position: relative;
+    top: 280px; }
+
+  .entreelol {
+    text-align: center; }
+
+  .devienFou {
+    text-align: center; } }
+@media only screen and (min-width: 992px) {
+  .main-footer {
+    text-align: center;
+    position: relative;
+    top: 170px; }
+
+  .panel-body img {
+    width: 450px;
+    height: 400px;
+    right: 50%; }
+
+  .entreelol {
+    text-align: center; }
+
+  #resto1, #resto2 {
+    text-align: center; }
+
+  .devienFou {
+    text-align: center; } }
+@media only screen and (min-width: 768px) {
+  .main-footer {
+    text-align: center;
+    position: relative;
+    top: 390px; }
+
+  .panel-body img {
+    width: 340px;
+    height: 340px;
+    right: 50%; }
+
+  .entreelol {
+    text-align: center; }
+
+  .devienFou {
+    text-align: center; } }
+@media only screen and (min-width: 600px) {
+  .main-footer {
+    text-align: center;
+    position: relative;
+    top: 690px; }
+
+  .container-fluid, .cartouchette {
+    position: relative;
+    top: 150px; }
+
+  .panel-body img {
+    width: 250px;
+    height: 250px;
+    right: 50%; }
+
+  /* #bad1{
+    position: relative;
+    left: 80px;
+  }
+  #bad2{
+    position: relative;
+    left: 445px;
+  }
+  #bad3{
+    position: relative;
+    left: 90px;
+  }
+  #bad4{
+    position: relative;
+    left: 70px;
+  }
+  #bad5{
+    position: relative;
+    left: 495px;
+  }
+  #bad6{
+    position: relative;
+    left: 430px;
+  }
+  #bad7{
+    position: relative;
+    left: 440px;
+  } */
+  #contact {
+    position: relative;
+    top: 240px; }
+
+  .row {
+    position: relative;
+    top: 140px; }
+
+  textarea {
+    width: 500px; }
+
+  .devienFou {
+    position: relative;
+    top: 100px;
+    text-align: center; }
+
+  .entreelol {
+    position: relative;
+    top: 100px;
+    text-align: center; }
+
+  #FiveFingers {
+    margin: 0; }
+
+  .navbar-nav {
+    margin: 0; } }
+@media only screen and (max-width: 600px) {
+  #FingersMoves {
+    margin: 0; }
+
+  .main-footer {
+    text-align: center;
+    position: relative;
+    top: 135px; }
+
+  .container-fluid, .cartouchette {
+    position: relative;
+    top: 150px;
+    text-align: center; }
+
+  .panel-body img {
+    width: 150px;
+    height: 150px;
+    text-align: center; }
+
+  /* #bad1{
+    position: relative;
+    left: 60px;
+  }
+  #bad2{
+    position: relative;
+    left: 125px;
+  }
+  #bad3{
+    position: relative;
+    left: 150px;
+  }
+  #bad4{
+    position: relative;
+    left: 54px;
+  }
+  #bad5{
+    position: relative;
+    left: 120px;
+  }
+  #bad6{
+    position: relative;
+    left: 120px;
+  }
+  #bad7{
+    position: relative;
+    left: 125px;
+  } */
+  .devienFou {
+    position: relative;
+    top: 90px;
+    text-align: center; }
+
+  .entreelol {
+    position: relative;
+    top: 90px;
+    text-align: center; }
+
+  .imagee1 img {
+    width: 240px;
+    height: 240px; }
+
+  .row {
+    position: relative;
+    top: 130px; }
+
+  #contact {
+    position: relative;
+    top: 130px; }
+
+  textarea {
+    width: 330px; } }
+
+/*# sourceMappingURL=ASpiCheloux.css.map */
