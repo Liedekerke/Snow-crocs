@@ -1,12 +1,12 @@
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
   'https://liedekerke.github.io/projet/index.html',
-  'https://liedekerke.github.io/projet/TinkyWinky.html',
-  'https://liedekerke.github.io/projet/LaaLaa.html',
+  'https://liedekerke.github.io/projet/carte.html',
+  'https://liedekerke.github.io/projet/photo.html',
   'https://liedekerke.github.io/projet/plat.html',
   'https://liedekerke.github.io/projet/dessert.html',
-  'https://liedekerke.github.io/projet/Dipsy.html',
-  'https://liedekerke.github.io/projet/Po.html'
+  'https://liedekerke.github.io/projet/restaurant.html',
+  'https://liedekerke.github.io/projet/contact.html'
 ];
 
 self.addEventListener('install', function(event) {

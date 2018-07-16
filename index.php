@@ -5,8 +5,8 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  <link rel="manifest" href="assets/manifest.json" />
   <meta name="theme-color" content="#317EFB" />
   <meta name="Description" content="oui" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,23 +17,7 @@
 
   <section>
 
-    <div class="main-haider">
-      <div class="jumbotron">
-        <!-- <div style="background:#425ca9 !important" class="jumbotron"> -->
-        <h1 style="color: red !important">Va & Vins</h1>
-        <img...>
-          <nav class="navbar navbar-inverse" id="FiveFingers">
-            <ul class="nav navbar-nav" id="FingersMoves">
-              <li id="FingerFive"><a href="index.html"> Accueil</a></li>
-              <li id="FingerOne"><a href="carte.html"> Carte</a></li>
-              <li id="FingerTwo"><a href="photo.html"> Photos</a></li>
-              <li id="FingerThree"><a href="restaurant.html">Restaurants</a></li>
-              <li id="FingerFour"><a href="contact.html">Contact</a></li>
-            </ul>
-      </div>
-      </nav>
-
-    </div>
+<?php include('assets/includes/header.php'); ?>
 
   </section>
 
@@ -79,7 +63,7 @@
               </div>
 
 <script src="ap.js" async></script>
-            <!-- <script>
+            <!- <script>
             scripts/ap.js
             app
             add/refresh
@@ -93,25 +77,21 @@
 
   <section>
 
-    <div class="main-footer">
-      <p> <span class="glyphicon glyphicon-copyright-mark"></span> Copyright- Nicolas de Liedekerke </p>
-    </div>
+<?php include('assets/includes/footer.php'); ?>
 
   </section>
-
-</body>
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('service-worker.js').then(function(registration) {
-        // Registration was successful
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      }, function(err) {
-        // registration failed :(
-        console.log('ServiceWorker registration failed: ', err);
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('assets/JS/service-worker.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
       });
-    });
-  }
-</script>
-
+    }
+  </script>
+</body>
 </html>

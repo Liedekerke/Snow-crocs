@@ -16,23 +16,8 @@
 
   <section>
 
-    <div class="main-haider">
-      <div class="jumbotron">
-        <!-- <div style="background:#425ca9 !important" class="jumbotron"> -->
-        <h1 style="color: red !important">Va & Vins</h1>
-        <img...>
-          <nav class="navbar navbar-inverse" id="FiveFingers">
-            <ul class="nav navbar-nav" id="FingersMoves">
-              <li id="FingerFive"><a href="index.html"> Accueil</a></li>
-              <li id="FingerOne"><a href="TinkyWinky.html"> Carte</a></li>
-              <li id="FingerTwo"><a href="LaaLaa.html"> Photos</a></li>
-              <li id="FingerThree"><a href="Dipsy.html">Restaurants</a></li>
-              <li id="FingerFour"><a href="Po.html">Contact</a></li>
-            </ul>
-      </div>
-      </nav>
+<?php include('assets/includes/header.php'); ?>
 
-    </div>
   </section>
 
   <section class="devienFou">
@@ -68,25 +53,23 @@
   </section>
   <section>
 
-    <div class="main-footer">
-      <p> <span class="glyphicon glyphicon-copyright-mark"></span> Copyright- Nicolas de Liedekerke </p>
-    </div>
+<?php include('assets/includes/footer.php'); ?>
 
   </section>
-
-</body>
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('service-worker.js').then(function(registration) {
-        // Registration was successful
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      }, function(err) {
-        // registration failed :(
-        console.log('ServiceWorker registration failed: ', err);
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
       });
-    });
-  }
-</script>
+    }
+  </script>
+</body>
+
 
 </html>
