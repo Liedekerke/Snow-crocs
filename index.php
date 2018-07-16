@@ -39,47 +39,14 @@
 
   </section>
 
-  <!-- <section>
-            <header class="header">
 
-                <button id="butRefresh" class="headerButton"></button>
-                <button id="butAdd" class="headerButton"></button>
-              </header>
-
-              <main class="main">
-                <div class="card cardTemplate weather-forecast" hidden>
-                . . .
-                </div>
-              </main>
-
-              <div class="dialog-container">
-              . . .
-              </div>
-
-              <div class="loader">
-                <svg viewBox="0 0 32 32" width="32" height="32">
-                  <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
-                </svg>
-              </div>
-
-<script src="ap.js" async></script>
-            <!- <script>
-            scripts/ap.js
-            app
-            add/refresh
-            add/cancel
-            app.updateForecastCard()
-            app.getForecast()
-            app.updateForecasts(initialWeatherForecast)
-            </script> -->
-
-  <!-- </section> -->
 
   <section>
 
 <?php include('assets/includes/footer.php'); ?>
 
   </section>
+  
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
