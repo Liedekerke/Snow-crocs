@@ -20,21 +20,7 @@
 
   </section>
 
-  <section class="devienFou">
-    <nav aria-label="photos">
-      <ul class="pagination">
-        <li>
-          <a href="LaaLaa.html">
-            <<< </a>
-        </li>
-        <li><a href="LaaLaa.html"> 1 </a></li>
-        <li><a href="plat.html"> 2 </a></li>
-        <li><a href="dessert.html"> 3 </a></li>
-        <li><a href="dessert.html"> >>> </a></li>
-      </ul>
-    </nav>
-
-  </section>
+assets/
 
   <section class="entreelol">
 
@@ -44,9 +30,9 @@
 
     <div id="2page" class="imagee1">
       <p>
-        <img src="images/plat1.jpg" alt="plat1" id="plat1" />
-        <img src="images/plat2.jpg" alt="plat2" id="plat2" />
-        <img src="images/plat3.jpg" alt="plat3" id="plat3" />
+        <img src="assets/images/plat1.jpg" alt="plat1" id="plat1" />
+        <img src="assets/images/plat2.jpg" alt="plat2" id="plat2" />
+        <img src="assets/images/plat3.jpg" alt="plat3" id="plat3" />
       </p>
     </div>
 

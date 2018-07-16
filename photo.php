@@ -20,21 +20,7 @@
 
   </section>
 
-  <section class="devienFou">
-    <nav aria-label="photos">
-      <ul class="pagination">
-        <li>
-          <a href="dessert.html">
-            <<< </a>
-        </li>
-        <li><a href="photo.html"> 1 </a></li>
-        <li><a href="plat.html"> 2 </a></li>
-        <li><a href="dessert.html"> 3 </a></li>
-        <li><a href="plat.html"> >>> </a></li>
-      </ul>
-    </nav>
-
-  </section>
+  <?php include('assets/includes/photos.php'); ?>assets/
 
   <section class="entreelol">
 
@@ -44,9 +30,9 @@
 
     <div id="1page" class="imagee1">
       <p>
-        <img src="images/entree1.jpg" alt="entree1" id="entree1" />
-        <img src="images/entree2.jpg" alt="entree2" id="entree2" />
-        <img src="images/entree3.jpg" alt="entree3" id="entree3" />
+        <img src="assets/images/entree1.jpg" alt="entree1" id="entree1" />
+        <img src="assets/images/entree2.jpg" alt="entree2" id="entree2" />
+        <img src="assets/images/entree3.jpg" alt="entree3" id="entree3" />
       </p>
     </div>
 

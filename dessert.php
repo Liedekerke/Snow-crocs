@@ -19,21 +19,8 @@
 <?php include('assets/includes/header.php'); ?>
 
   </section>
-  <section class="devienFou">
-    <nav aria-label="photos">
-      <ul class="pagination">
-        <li>
-          <a href="plat.html">
-            <<< </a>
-        </li>
-        <li><a href="photo.html"> 1 </a></li>
-        <li><a href="plat.html"> 2 </a></li>
-        <li><a href="dessert.html"> 3 </a></li>
-        <li><a href="photo.html"> >>> </a></li>
-      </ul>
-    </nav>
 
-  </section>
+  <?php include('assets/includes/photos.php'); ?>
 
   <section class="entreelol">
 
@@ -42,10 +29,10 @@
     </div>
 
     <div id="3page" class="imagee1">
-      <img src="images/dessert1.jpg" alt="dessert1" id="dessert1" />
-      <img src="images/dessert2.jpg" alt="dessert2" id="dessert2" />
-      <img src="images/dessert3.jpg" alt="dessert3" id="dessert3" />
-      <img src="images/dessert4.jpg" alt="dessert4" id="dessert4" />
+      <img src="assets/images/dessert1.jpg" alt="dessert1" id="dessert1" />
+      <img src="assets/images/dessert2.jpg" alt="dessert2" id="dessert2" />
+      <img src="assets/images/dessert3.jpg" alt="dessert3" id="dessert3" />
+      <img src="assets/images/dessert4.jpg" alt="dessert4" id="dessert4" />
     </div>
 
 

@@ -28,11 +28,11 @@
       <div class="panel panel-info" style="background:black !important">
         <div id="panelOne">
           <div class="panel-heading">-30% sur la pate !!!</div>
-          <div class="panel-body"><img src="images/dessert1.jpg" alt="dessert1" id="dessert1" /></div>
+          <div class="panel-body"><img src="assets/images/dessert1.jpg" alt="dessert1" id="dessert1" /></div>
         </div>
         <div id="panelTow">
           <div class="panel-heading">-2% sur le plaisir !!!</div>
-          <div class="panel-body"><img src="images/dessert3.jpg" alt="dessert3" id="dessert3" /></div>
+          <div class="panel-body"><img src="assets/images/dessert3.jpg" alt="dessert3" id="dessert3" /></div>
         </div>
       </div>
     </div>
