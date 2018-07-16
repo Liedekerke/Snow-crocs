@@ -6,17 +6,17 @@
   <title>Va & Vins</title>
 </head>
 
-<body style="background:black !important">
+<body style="position: absolute; top: 0px; width: 100%; background-size: cover; background-position: center center; background-repeat: no-repeat; height: 100%; background-image: url("assets/images/splashart3.jpg");">
 
-  <section>
+
 
 <?php include('assets/includes/header.php'); ?>
 
-  </section>
+
 
   <section>
 
-    <div class="container-fluid">
+    <!-- <div class="container-fluid">
 
       <div class="panel panel-info" style="background:black !important">
         <div id="panelOne">
@@ -28,17 +28,17 @@
           <div class="panel-body"><img src="assets/images/dessert3.jpg" alt="dessert3" id="dessert3" /></div>
         </div>
       </div>
-    </div>
+    </div> -->
 
   </section>
 
 
 
-  <section>
+
 
 <?php include('assets/includes/footer.php'); ?>
 
-  </section>
+
 
   <script>
     if ('serviceWorker' in navigator) {

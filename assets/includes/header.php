@@ -1,5 +1,5 @@
-<div class="main-haider">
-  <div class="jumbotron">
+<header class="container-fluid">
+  <div class="jumbotron-fluid">
     <!-- <div style="background:#425ca9 !important" class="jumbotron"> -->
     <h1 style="color: red !important">Va & Vins</h1>
     <img...>
@@ -13,5 +13,4 @@
         </ul>
   </div>
   </nav>
-
-</div>
+</header>

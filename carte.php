@@ -8,11 +8,11 @@
 
 <body style="background:black !important">
 
-  <section>
+
 
 <?php include('assets/includes/header.php'); ?>
 
-  </section>
+  
 
   <section class="cartouchette">
     <div id="entree">
@@ -39,11 +39,11 @@
                   <a href="#">Updates <span class="badge">2</span></a> -->
   </section>
 
-  <section>
+
 
 <?php include('assets/includes/footer.php'); ?>
 
-  </section>
+
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {

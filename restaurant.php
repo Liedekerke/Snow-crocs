@@ -8,11 +8,11 @@
 
 <body style="background:black !important">
 
-  <section>
+  
 
 <?php include('assets/includes/header.php'); ?>
 
-  </section>
+
 
   <!-- <section class="container justify-content-center"> -->
   <section class="row">
@@ -42,11 +42,11 @@
 
   </section>
 
-  <section>
+
 
 <?php include('assets/includes/footer.php'); ?>
 
-  </section>
+
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
