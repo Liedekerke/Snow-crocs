@@ -335,24 +335,29 @@ form label {
 
 /*# sourceMappingURL=ASpiChelouxvjsfmlkjhmhhmdskufhprezahfmohrezamfoihjreamoifhjrezaareùozjfùorezaifùorezaifmorezai.css.map */
 
-html, body {
+/* html, body {
   color: #fff;
   background: url("/assets/images/splashart3.jpg");
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
-}
+} */
 
-body {
+/* body {
   /*padding-top: 96px;*/
-  /*Depth of navbar*/
-  font-family: 'Open Sans', sans-serif;
-}
 
-footer {
-  /*margin-top: 2rem;*/
-  background-color: #181818;
-}
+/*Depth of navbar*/
+
+/* font-family: 'Open Sans', sans-serif;
+} */
+
+/* footer { */
+
+/*margin-top: 2rem;*/
+
+/* background-color: #181818; */
+
+/* } */
 
 /*NAVIGATION*/
 
@@ -374,25 +379,25 @@ footer {
   background-color: #181818 !important;
 }
 
-.bg-sc-medium {
+/* .bg-sc-medium {
   background-color: #212121 !important;
-}
+} */
 
-.bg-semitransparent {
+/* .bg-semitransparent {
   background-color: rgba(52, 58, 64, 0.75) !important
-}
+} */
 
-.nav-container {
+/* .nav-container {
   max-width: 1280px;
-}
+} */
 
-.navbar-brand-small {
+/* .navbar-brand-small {
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
-}
+} */
 
-.navbar-nav .drodown-menu {
+/* .navbar-nav .drodown-menu {
   background-color: #181818;
 }
 
@@ -411,7 +416,7 @@ footer {
 
 .nav-item.dropdown .dropdown-item:hover {
   color: #181818;
-}
+} */
 
 /*NAVIGATION TABS*/
 
@@ -433,9 +438,9 @@ footer {
 
 /*GENERAL*/
 
-.hidden {
+/* .hidden {
   display: none;
-}
+} */
 
 a {
   color: #ceb895;
