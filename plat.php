@@ -20,7 +20,7 @@
 
   </section>
 
-assets/
+  <?php include('assets/includes/photos.php'); ?>
 
   <section class="entreelol">
 
