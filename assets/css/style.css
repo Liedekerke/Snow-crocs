@@ -391,23 +391,26 @@ form label {
 
 /*# sourceMappingURL=ASpiCheloux.css.map */
 
-.navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, .5);
+html, body {
+  color: #fff;
+  background: url("/assets/bg-main-2.jpg");
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
 }
 
-.navbar-nav .nav-link {
-  padding-right: 0;
-  padding-left: 0;
+body {
+  /*padding-top: 96px;*/
+  /*Depth of navbar*/
+  font-family: 'Open Sans', sans-serif;
 }
 
-.nav-link {
-  display: block;
-  padding: .5rem 1rem;
+footer {
+  /*margin-top: 2rem;*/
+  background-color: #181818;
 }
 
-.bg-sc-dark {
-  background-color: #181818 !important;
-}
+/*NAVIGATION*/
 
 .navbar {
   font-family: 'Montserrat', sans-serif;
@@ -416,60 +419,214 @@ form label {
   font-size: .75rem;
 }
 
-.navbar {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex wrap: wrap;
-  flex-wrap: wrap;
-  -ms-flex align: center;
-  align-items: center;
-  -ms-flex pack: justify;
-  justify-content: space-between;
-  padding: .5rem 1rem;
-}
-
-.navbar-brand {
-  display: inline-block;
-  padding-top: .3125rem;
-  padding-bottom: .3125rem;
-  margin-right: 1rem;
-  font-size: 1.25rem;
-  line-height: inherit;
-  white-space: nowrap;
-}
-
 .navbar-brand {
   font-family: 'Montserrat', sans-serif;
   text-transform: capitalize;
   font-weight: normal;
-  font-size: .75rem;
+  /*font-size: .75rem;*/
 }
 
-.navbar-toggler {
-  padding: .25rem .75rem;
-  font-size: 1.25rem;
-  line-height: 1;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: .25rem;
+.bg-sc-dark {
+  background-color: #181818 !important;
 }
 
-/* button, input {
-  overflow: visible;
+.bg-sc-medium {
+  background-color: #212121 !important;
 }
 
-button, select {
-  text-transform: none;
-} */
+.bg-semitransparent {
+  background-color: rgba(52, 58, 64, 0.75) !important
+}
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+.nav-container {
+  max-width: 1280px;
+}
+
+.sticky-top {
+  transition: all 0.25s ease-in;
+}
+
+/* style for when sitcky is applied */
+
+.stuck .sticky-top {
+  background-color: rgba(24, 24, 24, 0.95) !important
+  /*padding-top: 3px !important;*/
+  /*padding-bottom: 3px !important;*/
+}
+
+.navbar-brand-small {
   font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-divider {
+  height: 60%;
+  margin-top: 7px;
+  margin-left: .25rem;
+  margin-right: .25rem;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.dropdown-menu {
+  z-index: 9999;
+}
+
+.navbar-nav .drodown-menu {
+  background-color: #181818;
+}
+
+.navbar-nav .drodown-menu .dropdown-item {
+  background-color: #ffffff;
+}
+
+.navbar-nav .dropdown-menu {
+  background-color: #181818;
+}
+
+.nav-item.dropdown .dropdown-item {
+  color: white;
+  padding: .5rem 1.25rem;
+}
+
+.nav-item.dropdown .dropdown-item:hover {
+  color: #181818;
+}
+
+/*NAVIGATION TABS*/
+
+.subnav-link {
+  padding: 1rem 1rem;
+  display: inline-block;
+}
+
+.subnav-link-sub {
+  padding-left: .25rem;
+  padding-right: .25rem;
+  display: inline-block;
+  font-weight: normal;
+  /*transition: 0.3s ease-in-out;*/
+}
+
+.nav-tabs {
+  background: #181818;
+  font-weight: 500;
+  border-bottom: 1px solid #181818;
+}
+
+.nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-color: transparent;
+  font-weight: 600;
+}
+
+.nav-tabs .nav-link.subnav-link-sub.active {
+  color: #858585;
+  font-weight: normal;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+  border-color: transparent;
+}
+
+/*GENERAL*/
+
+.hidden {
+  display: none;
+}
+
+a {
+  color: #ceb895;
+}
+
+a:hover {
+  /*color: #9e9e9e;*/
+  color: #ceb895;
+  /*text-decoration: underline;*/
+}
+
+.container-dark {
+  background: #212121;
+  padding-top: 1rem;
+  border-top: 24px solid #181818;
+}
+
+.container.container-subnav {
+  background: #181818;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(19, 19, 19, .33);
+  border-bottom: 1px solid rgba(236, 236, 236, .11);
+}
+
+.text-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 2px;
+  transform: translate(0, -2px);
+}
+
+.text-icon-nav {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  transform: translate(0, 0px);
+}
+
+.custom-counter .text-icon {
+  margin-right: 5px;
+}
+
+.benchmarks-composition-icon {
+  border: 0px solid transparent;
+  transition: .5s;
+}
+
+.benchmarks-composition-icon:hover {
+  border: 5px solid transparent;
+  transition: .5s;
+}
+
+.benchmark-prof-icon {
+  width: 24px;
+  height: 24px;
+  /*margin-right: 6px;*/
+  transform: translate(0, -2px);
+}
+
+.benchmark-prof-icon-border {
+  width: 30px;
+  height: 24px;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  margin-left: 6px;
+  padding-left: 6px;
+}
+
+.benchmark-divider {
+  height: 60%;
+  margin-top: 7px;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+h1.fancy {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.56);
+  line-height: 0.1em;
+  margin: 20px 0 40px;
   font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  text-align: left;
-  background-color: #fff;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+}
+
+h1.fancy span {
+  background: #212121;
+  padding: 0 10px;
 }
