@@ -6,7 +6,7 @@
   <title>Va & Vins</title>
 </head>
 
-<body style="position: absolute; top: 0px; width: 100%; background-size: cover; background-position: center center; background-repeat: no-repeat; height: 100%; background-image: url("assets/images/splashart3.jpg");">
+<body>
 
 
 
