@@ -18,16 +18,17 @@
 
 <body>
 
-
+<header class="container-fluid">
 
 <?php include('assets/includes/header.php'); ?>
 
+</header>
 
-
-
+<main>
 <div class="jarallax jarallax-home" style="background-image: url('/assets/images/splashart.jpg'); background-repeat: no-repeat;position: absolute;top: 0px; left:0px; width:100%; height: 100%; overflow: hidden; pointer-events:none; z-index: -100;">
 
 </div>
+</main>
     <!-- <div class="container-fluid">
 
       <div class="panel panel-info" style="background:black !important">
@@ -47,9 +48,9 @@
 
 
 
-
+<footer class="container-fluid text-center">
 <?php include('assets/includes/footer.php'); ?>
-
+</footer>
 
 
   <script>
