@@ -25,7 +25,9 @@
 
 
   <section>
+<div class="col-sm-12 col-lg-12 col-md-12" style="background-image: url('/assets/images/splashart3.jpg'); background-repeat: no-repeat;position: absolute;top: 0px; left:0px; width:100%; height: 100%; overflow: hidden; pointer-events:none; z-index: -100;">
 
+</div>
     <!-- <div class="container-fluid">
 
       <div class="panel panel-info" style="background:black !important">
