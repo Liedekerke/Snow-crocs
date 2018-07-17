@@ -25,7 +25,7 @@
 </header>
 
 <main>
-<div class="jarallax jarallax-home" style="background-image: url('/assets/images/splashart3.jpg'); background-repeat: no-repeat;position: absolute;top: 0px; left:0px; width:100%; height: 100%; overflow: hidden; pointer-events:none; z-index: -100;">
+<!-- <div class="jarallax jarallax-home" style="background-image: url('/assets/images/splashart3.jpg'); background-repeat: no-repeat;position: absolute;top: 0px; left:0px; width:100%; height: 100%; overflow: hidden; pointer-events:none; z-index: -100;"> -->
 
 </div>
 </main>
