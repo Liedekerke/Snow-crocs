@@ -363,6 +363,10 @@ form label {
 
 /*NAVIGATION*/
 
+.nav-container {
+  max-width: 1280px;
+}
+
 .navbar {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
@@ -423,4 +427,30 @@ a:hover {
 
 html {
   height: 900px;
+}
+
+jarallax {
+  position: relative;
+  z-index: 0;
+}
+
+.jarallax>.jarallax-img {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.jarallax-home {
+  height: 100vh;
+}
+
+footer {
+  background-color: #181818;
+  margin-top: 4rem;
+  padding: 2rem;
+  border-top: 1rem solid #212121;
 }

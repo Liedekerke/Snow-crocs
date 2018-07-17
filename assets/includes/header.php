@@ -51,7 +51,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-sc-dark">
   <div class="container nav-container">
     <a class="navbar-brand" href="index.php">
-      <h2 style="height:26px;"> Snow Crows </h2>
+      <h2 style="height:26px;"> Snow Crocs </h2>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
