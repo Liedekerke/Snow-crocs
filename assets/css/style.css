@@ -450,7 +450,18 @@ jarallax {
 
 footer {
   background-color: #181818;
-  margin-top: 4rem;
-  padding: 2rem;
-  border-top: 1rem solid #212121;
+  /* margin-top: 4rem; */
+  margin-top: 35rem;
+  /* padding: 2rem; */
+  padding: 0.2rem;
+  /* border-top: 1rem solid #212121; */
+}
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#copiriri {
+  margin: 0px;
 }
