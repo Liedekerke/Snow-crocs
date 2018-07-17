@@ -381,45 +381,6 @@ form label {
   background-color: #181818 !important;
 }
 
-/* .bg-sc-medium {
-  background-color: #212121 !important;
-} */
-
-/* .bg-semitransparent {
-  background-color: rgba(52, 58, 64, 0.75) !important
-} */
-
-/* .nav-container {
-  max-width: 1280px;
-} */
-
-/* .navbar-brand-small {
-  font-size: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-} */
-
-/* .navbar-nav .drodown-menu {
-  background-color: #181818;
-}
-
-.navbar-nav .drodown-menu .dropdown-item {
-  background-color: #ffffff;
-}
-
-.navbar-nav .dropdown-menu {
-  background-color: #181818;
-}
-
-.nav-item.dropdown .dropdown-item {
-  color: white;
-  padding: .5rem 1.25rem;
-}
-
-.nav-item.dropdown .dropdown-item:hover {
-  color: #181818;
-} */
-
 /*NAVIGATION TABS*/
 
 . .nav-link.active {
@@ -439,10 +400,6 @@ form label {
 }
 
 /*GENERAL*/
-
-/* .hidden {
-  display: none;
-} */
 
 a {
   color: #ceb895;
