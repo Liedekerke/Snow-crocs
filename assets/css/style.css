@@ -486,3 +486,15 @@ footer {
 .jarallax-home {
   height: 100vh;
 }
+
+/* DARK */
+
+.container-dark {
+  background: #212121;
+  padding-top: 1rem;
+  border-top: 24px solid #181818;
+}
+
+.container {
+  background: #181818;
+}
