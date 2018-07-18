@@ -33,6 +33,7 @@ init = function(){
 
       jarallax.addAnimation('.jarallax_background', [{progress:'0%', top:'-500'},{progress:'100%', top:'-1000px'}])
     }
+    init();
 </script>
 
 </body>

@@ -3,7 +3,7 @@
   <title>oui</title>
 </head>
 
-<body onload="init()">
+<body>
 
 <!-- HEADER -->
 
