@@ -26,14 +26,14 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="assets/js/jarallax.js"></script>
-<!-- <script src="assets/js/jarallax-element.js"></script> -->
+<script src="assets/js/jarallax-element.js"></script>
 <script>
 init = function(){
       var jarallax = new Jarallax();
 
       jarallax.addAnimation('.jarallax_background', [{progress:'0%', top:'-500'},{progress:'100%', top:'-1000px'}])
     }
-    init();
+    // init();
 </script>
 
 </body>
