@@ -47,6 +47,7 @@
   </div>
 </nav> -->
 <!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+<header class="container-fluid">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-sc-dark">
   <div class="container nav-container">
@@ -78,3 +79,4 @@
     </div>
   </div>
 </nav>
+</header>
