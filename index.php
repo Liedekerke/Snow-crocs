@@ -1,7 +1,7 @@
 <?php include('assets/includes/head.php'); ?>
 
-<script type="text/javascript" src="assets/js/jarallax-0.2.1.js"></script>
-<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+<!-- <script type="text/javascript" src="assets/js/jarallax-0.2.1.js"></script> -->
+
 
   <title>oui</title>
 </head>
@@ -59,7 +59,7 @@
               <br>
 
         <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/kJgdCRq-764" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/7gZ7UyYP7JM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
             </div>
       <div class="col-12 col-md-5 offset-md-1">
@@ -67,8 +67,9 @@
           <tbody>
           <tr>
             <td class="align-middle">
-              <h1 style="font-weight:600;">ABOUT THE GUILD</h1>
-              <p>Snow Crows is a community of hardcore PvE players who strive to be at the top in terms of raids, fractals and dungeons. Outside of weekly raiding and daily fractals, record attempts are likely to take place for the most engaged players. Additionally, we provide builds, guides & benchmarks for the community to use.</p>
+              <h1 style="font-weight:600;">ABOUT THE RESTAURANT</h1>
+              <p>Depuis 1942, le restaurant Snow Crocs n’a eu de cesse d’accueillir les amoureux du goût et du plaisir, pour des moments de bonheur et d’émerveillement.
+              Aujourd’hui, Lasserre continue à unir tradition et innovation, grâce à l’enthousiasme du Chef Bob et de son équipe.</p>
 
             </td>
           </tr>
