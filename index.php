@@ -14,7 +14,7 @@
 
 
 <!-- MAIN -->
-<main>
+<!-- <main> -->
 
 
 <!-- BG -->
@@ -27,22 +27,22 @@
     <div class="row">
       <div class="col-12 col-sm-6 col-md-3">
         <a href="carte.php">
-        <img src="assets/images/image4.png" class="img-fluid img-max img-home-button">
+        <img src="assets/images/image4.jpg" class="img-fluid img-max img-home-button">
         </a>
       </div>
       <div class="col-12 col-sm-6 col-md-3">
         <a href="photo.php">
-        <img src="assets/images/image4.png" class="img-fluid img-max img-home-button">
+        <img src="assets/images/image4.jpg" class="img-fluid img-max img-home-button">
         </a>
       </div>
       <div class="col-12 col-sm-6 col-md-3">
         <a href="restaurant.php">
-        <img src="assets/images/image4.png" class="img-fluid img-max img-home-button">
+        <img src="assets/images/image4.jpg" class="img-fluid img-max img-home-button">
         </a>
       </div>
       <div class="col-12 col-sm-6 col-md-3">
         <a href="contact.php" target="_blank">
-        <img src="assets/images/image4.png" class="img-fluid img-max img-home-button">
+        <img src="assets/images/image2.jpg" class="img-fluid img-max img-home-button">
         </a>
       </div>
     </div>
@@ -55,18 +55,12 @@
       <div class="col-12 col-md-6">
 
         <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item"
-            src="https://www.youtube.com/watch?v=kJgdCRq-764"
-            allowfullscreen>
-          </iframe>
+          <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/kJgdCRq-764" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
               <br>
 
         <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item"
-            src="https://www.youtube.com/watch?v=kJgdCRq-764"
-            allowfullscreen>
-          </iframe>
+          <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/kJgdCRq-764" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
             </div>
       <div class="col-12 col-md-5 offset-md-1">
@@ -86,26 +80,26 @@
   </div>
 </div>
 
-<div class="container-fluid container-dark hidden" style="border-bottom: 24px solid #181818;padding-bottom:15px;">
+<!-- <div class="container-fluid container-dark hidden" style="border-bottom: 24px solid #181818;padding-bottom:15px;">
   <div class="container">
     <div class="row">
       <div class="col-6 col-md-3">
         <img src="/assets/images/imagetest.png" class="img-fluid">
       </div>
       <div class="col-6 col-md-3">
-        <img src="/assets/images/imagetest.png" class="img-fluid">
+        <img src="/assets/buttons/potions.png" class="img-fluid">
       </div>
       <div class="col-6 col-md-3">
-        <img src="/assets/images/imagetest.png" class="img-fluid">
+        <img src="/assets/buttons/new-to-raids.png" class="img-fluid">
       </div>
       <div class="col-6 col-md-3">
-        <img src="/assets/images/imagetest.png" class="img-fluid">
+        <img src="/assets/buttons/social.png" class="img-fluid">
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
-</main>
+<!-- </main> -->
     <!-- <div class="container-fluid">
 
       <div class="panel panel-info" style="background:black !important">
