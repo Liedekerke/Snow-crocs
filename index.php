@@ -48,6 +48,25 @@
   </div>
 </div> -->
 
+<div class="container-fluid container-dark hidden" style="border-bottom: 24px solid #181818;padding-bottom:15px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-3">
+        <img src="/assets/images/imagetest.png" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="/assets/buttons/potions.png" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="/assets/buttons/new-to-raids.png" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="/assets/buttons/social.png" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="jarallax jarallax-about" style="background-image: url('/assets/images/splshart2.jpg');">
   <div class="container">
     <div class="row">
@@ -80,24 +99,7 @@
   </div>
 </div>
 
-<div class="container-fluid container-dark hidden" style="border-bottom: 24px solid #181818;padding-bottom:15px;">
-  <div class="container">
-    <div class="row">
-      <div class="col-6 col-md-3">
-        <img src="/assets/images/imagetest.png" class="img-fluid">
-      </div>
-      <div class="col-6 col-md-3">
-        <img src="/assets/buttons/potions.png" class="img-fluid">
-      </div>
-      <div class="col-6 col-md-3">
-        <img src="/assets/buttons/new-to-raids.png" class="img-fluid">
-      </div>
-      <div class="col-6 col-md-3">
-        <img src="/assets/buttons/social.png" class="img-fluid">
-      </div>
-    </div>
-  </div>
-</div>
+
 
 <!-- </main> -->
     <!-- <div class="container-fluid">
