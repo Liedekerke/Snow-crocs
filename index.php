@@ -12,11 +12,10 @@
 
 <!-- MAIN -->
 <main>
-<!-- <div class="jarallax jarallax-home" style="background-image: url('/assets/images/splashart3.jpg'); background-repeat: no-repeat;position: absolute;top: 0px; left:0px; width:100%; height: 100%; overflow: hidden; pointer-events:none; z-index: -100;">
-</div> -->
+
 
 <!-- BG -->
-<div class="jarallax jarallax-home" style="background-image: none;" data-jarallax-original-styles="background-image: url('/assets/images/splashart3.jpg');">
+<div class="jarallax jarallax-home" style="background-image: url('/assets/images/splashart3.jpg');">
 
 <div id="jarallax-container-0" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; z-index: -100;">
   <div style="background-position: 50% 50%; background-size: cover; background-repeat: no-repeat; background-image: url(&quot;/assets/images/splashart3.jpg&quot;); position: fixed; top: 0px; left: 0px; width: 674px; height: 615px; overflow: hidden; pointer-events: none; margin-top: 0px; transform: translate3d(0px, 28px, 0px);">
@@ -81,12 +80,6 @@
           </tr>
           </tbody>
         </table>
-
-
-
-
-
-
       </div>
     </div>
   </div>
