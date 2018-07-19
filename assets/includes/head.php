@@ -17,7 +17,7 @@
 
 <script src="assets/js/jquery-3.3.1.min.js"></script>
 
-<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/style.css">
 <!-- <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script> -->
 
