@@ -67,7 +67,7 @@
           <tbody>
           <tr>
             <td class="align-middle">
-              <h1 style="font-weight:600;">ABOUT THE RESTAURANT</h1>
+              <h1 style="font-weight:600;">ABOUT THE SNOW CROCS</h1>
               <p>Depuis 1942, le restaurant Snow Crocs n’a eu de cesse d’accueillir les amoureux du goût et du plaisir, pour des moments de bonheur et d’émerveillement.
               Aujourd’hui, Lasserre continue à unir tradition et innovation, grâce à l’enthousiasme du Chef Bob et de son équipe.</p>
 

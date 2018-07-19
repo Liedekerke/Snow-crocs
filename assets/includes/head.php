@@ -12,7 +12,7 @@
 
 <link rel="stylesheet" href="/assets/css/jarallax.css">
 <script src="assets/js/jarallax.js"></script>
-<script src="assets/js/jarallax-video.js"></script>
+<!-- <script src="assets/js/jarallax-video.js"></script> -->
 <script src="assets/js/jarallax-element.js"></script>
 
 <script src="assets/js/jquery-3.3.1.min.js"></script>
