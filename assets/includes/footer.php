@@ -24,9 +24,8 @@
   }
 </script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="assets/js/jarallax.js"></script>
-<script src="assets/js/jarallax-element.js"></script>
+<script type="text/javascript" src="assets/js/jarallax-0.2.4b.js"></script>
+<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
 <!-- <script>
 init = function(){
       var jarallax = new Jarallax();
