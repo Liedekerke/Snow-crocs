@@ -48,7 +48,7 @@
   </div>
 </div> -->
 
-<div class="jarallax jarallax-about" style="background-image: url('/assets/images/splashart3.jpg');">
+<div class="jarallax jarallax-about" style="background-image: url('/assets/images/splshart2.jpg');">
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-6">
