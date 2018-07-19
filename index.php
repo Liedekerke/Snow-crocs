@@ -22,7 +22,7 @@
 
 </div>
 
-<div class="container-fluid container-dark" style="border-bottom: 24px solid #181818;padding-bottom:0px;">
+<!-- <div class="container-fluid container-dark" style="border-bottom: 24px solid #181818;padding-bottom:0px;">
   <div class="container">
     <div class="row">
       <div class="col-12 col-sm-6 col-md-3">
@@ -47,7 +47,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <div class="jarallax jarallax-about" style="background-image: url('/assets/images/splashart3.jpg');">
   <div class="container">
