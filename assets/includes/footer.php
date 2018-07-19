@@ -24,7 +24,7 @@
   }
 </script>
 
-<script type="text/javascript" src="assets/js/jarallax-0.2.3b.js"></script>
+<script type="text/javascript" src="assets/js/jarallax-0.2.1.js"></script>
 <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
 <!-- <script>
 init = function(){
