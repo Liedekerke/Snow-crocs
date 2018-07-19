@@ -1,19 +1,19 @@
 /*!
  * Jarallax
- * Version: 0.2.4b
+ * Version: 0.2.3b
  * website: http://jarallax.com
  *
- * Copyright 2013, Jacko Hoogeveen
+ * Copyright 2012, CodeHunger
  * Dual licensed under the MIT or GPL Version 3 licenses.
  * http://jarallax.com/license.html
  * 
- * Date: 08 Jun 2013
+ * Date: 08 Aug 2012
  */
 
 ////////////////////////////////////////////////////////////////////////////////
 // jarallax class //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-var Jarallax = function () {
+var Jarallax = function (controller) {
   this.FPS = 24;
   this.FPS_INTERVAL = 1000 / this.FPS;
   this.FRAME_DATA_SAMPLE = 24;
@@ -23,8 +23,7 @@ var Jarallax = function () {
   this.animations = [];
   this.defaultValues = [];
   this.progress = 0.0;
-  this.properties = {};
-  this.prevProgress = 0.0;
+  this.prev_progress = 0.0;
   this.controllers = [];
   this.maxProgress = 1;
   this.timer = undefined;
@@ -32,28 +31,24 @@ var Jarallax = function () {
   this.frameRate = this.FPS;
   this.stepSize = 0;
   this.jumping = false;
-  
-  for(var argument in arguments) {
-    if (arguments[argument] instanceof Array){
-      this.controllers = arguments[argument];
-    } else if (arguments[argument].isController) {
-      this.controllers.push(arguments[argument]);
-    } else if (arguments[argument] instanceof Object) {
-      this.properties = arguments[argument];
-    } else {
-      console.log('WARNING: bad argument ' + argument);
-    }
-  }
-  
-  if (!this.controller) {
-    if($.browser.iDevice) {
+
+  if (controller === undefined) {
+    if($.browser.iDevice){
       this.controllers.push(new ControllerApple(false));
     } else if ($.browser.mozilla) {
-      this.controllers.push(new ControllerScroll(false,
-          this.properties.horizontal, this.properties.disableVertical));
+      this.controllers.push(new ControllerScroll(false));
     } else {
-      this.controllers.push(new ControllerScroll(true,
-          this.properties.horizontal, this.properties.disableVertical));
+      this.controllers.push(new ControllerScroll(true));
+    }
+  } else if (controller !== 'none') {
+    if (controller.length) {
+      this.controllers = controller;
+    } else if (typeof (controller) === 'object') {
+      this.controllers.push(controller);
+    } else {
+      throw new Error('wrong controller data type: "' +
+                      typeof (controller) +
+                      '". Expected "object" or "array"');
     }
   }
 
@@ -75,12 +70,13 @@ Jarallax.prototype.setProgress = function (progress, isWeak) {
     progress = 1;
   } else if (progress < 0) {
     progress = 0;
+  }else{
+    progress = Math.round(progress * 1000) / 1000;
   }
-  
+
   if(this.progress != progress){
     this.progress = progress;
     if (this.allowWeakProgress || !weak) {
-      
       this.previousTime = new Date();
       this.currentTime = new Date();
       var weak = isWeak || false;
@@ -164,16 +160,16 @@ Jarallax.prototype.smooth = function (externalScope) {
                                        1,
                                        5);
 
-    scope.jumpingAllowed = true;
+    scope.jumping_allowed = true;
     scope.setProgress(newProgress);
-    scope.jumpingAllowed = false;
+    scope.jumping_allowed = false;
     scope.timer = window.setTimeout(function(){scope.smooth(scope);}, scope.smoothProperties.timeStep);
     scope.smoothProperties.previousValue = newProgress;
     scope.allowWeakProgress = false;
   } else {
-    scope.jumpingAllowed = true;
+    scope.jumping_allowed = true;
     scope.setProgress(scope.smoothProperties.startProgress + scope.smoothProperties.diffProgress);
-    scope.jumpingAllowed = false;
+    scope.jumping_allowed = false;
     scope.clearSmooth(scope);
   }
 };
@@ -485,6 +481,16 @@ JarallaxTools.Platforms = ['webkit',
                            'mobile',
                            'nonMobile'];
 
+/*jQuery.browser.webkit
+jQuery.browser.opera
+jQuery.browser.msie
+jQuery.browser.mozilla*/
+
+/**
+ * jQuery.browser.mobile (http://detectmobilebrowser.com/)
+ * jQuery.browser.mobile will be true if the browser is a mobile device
+ **/
+//(function(a){jQuery.browser.mobile=/android.+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|e\-|e\/|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(di|rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|xda(\-|2|g)|yas\-|your|zeto|zte\-/i.test(a.substr(0,4));})(navigator.userAgent||navigator.vendor||window.opera);
 
 jQuery.browser.android = /android/i.test(navigator.userAgent.toLowerCase());
 jQuery.browser.blackBerry = /blackberry/i.test(navigator.userAgent.toLowerCase());
@@ -525,7 +531,6 @@ jQuery.platform.unknown = !(jQuery.platform.windows ||
 JarallaxController = function() {
   this.isActive = false;
   this.bindings = [];
-  this.isController = true;
 };
 
 
@@ -687,18 +692,9 @@ JarallaxAnimation.prototype.activate = function (progress) {
             if(units !== '.'){
               result+= units;
             }
-            
-            if (i !== 'rotate') {
-              $(this.selector).css(i,result);
-            } else {
-              $(this.selector).rotate(Math.round(result));
-            }
+            $(this.selector).css(i,result);
           } else {
-            if (i !== 'rotate') {
-              $(this.selector).css(i,this.startValues[i]);
-            } else {
-              $(this.selector).rotate(Math.round(this.startValues[i]));
-            }
+            $(this.selector).css(i,this.startValues[i]);
           }
         }
       }
@@ -707,48 +703,48 @@ JarallaxAnimation.prototype.activate = function (progress) {
   }
 };
 
-JarallaxAnimation.prototype.dispatchEvent = function(progressOld, progressNew, 
+JarallaxAnimation.prototype.dispatchEvent = function(progress_old, progress_new, 
     start, end) {
   var events = this.startValues.event;
-  var eventData = {};
-  eventData.animation = this;
-  eventData.selector = this.selector;
+  var event_data = {};
+  event_data.animation = this;
+  event_data.selector = this.selector;
   
-  if (progressNew >= start && progressNew <= end ) {
-    if (events.start && progressOld < start) {
-      eventData.type = 'start';
-      events.start(eventData);
+  if (progress_new >= start && progress_new <= end ) {
+    if (events.start && progress_old < start) {
+      event_data.type = 'start';
+      events.start(event_data);
     }
     
-    if (events.start && progressOld > end) {
-      eventData.type = 'rewind';
-      events.start(eventData);
+    if (events.start && progress_old > end) {
+      event_data.type = 'rewind';
+      events.start(event_data);
     }
     
     if (events.animating) {
-      eventData.type = 'animating';
-      events.animating(eventData);
+      event_data.type = 'animating';
+      events.animating(event_data);
     } 
     
-    if (events.forward && progressOld < progressNew) {
-      eventData.type = 'forward';
-      events.forward(eventData);
+    if (events.forward && progress_old < progress_new) {
+      event_data.type = 'forward';
+      events.forward(event_data);
     }
     
-    if (events.reverse && progressOld > progressNew) {
-      eventData.type = 'reverse';
-      events.reverse(eventData);
+    if (events.reverse && progress_old > progress_new) {
+      event_data.type = 'reverse';
+      events.reverse(event_data);
     }
     
   } else {
-    if (events.complete && progressOld < end && progressNew > end) {
-      eventData.type = 'complete';
-      events.complete(eventData);
+    if (events.complete && progress_old < end && progress_new > end) {
+      event_data.type = 'complete';
+      events.complete(event_data);
     }
     
-    if (events.rewinded && progressOld > start && progressNew < start) {
-      eventData.type = 'rewind';
-      events.rewinded(eventData);
+    if (events.rewinded && progress_old > start && progress_new < start) {
+      event_data.type = 'rewind';
+      events.rewinded(event_data);
     }
   }
 };
@@ -813,6 +809,159 @@ ControllerApple.prototype.onMove = function(event) {
 
 ControllerApple.prototype.update = function(progress) {
   this.position.y = Math.round(progress * this.scrollSpace);
+};
+
+////////////////////////////////////////////////////////////////////////////////
+// Mobile controller ///////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+ControllerMobile = function(disableDefault, height){
+  this.disableDefault = disableDefault || false;
+  this.y = 0;
+  this.previousY = undefined;
+  this.height = height;
+};
+
+ControllerMobile.prototype = new JarallaxController();
+
+ControllerMobile.prototype.activate = function(jarallax){
+  JarallaxController.prototype.activate.call(this, jarallax);
+  
+  if (!this.height) {
+    this.height = this.height = parseInt($("body").css('height'),10);
+    if (this.height ==  $(window).height) {
+      this.height = parseInt($("#wrapper").css('height'),10);
+    }
+  }
+  $('body').bind('touchmove', {scope: this}, this.onTouchMove);
+  $('body').bind('touchend', {scope: this}, this.onTouchEnd);
+  //TODO:
+  //horizontal scrolling
+  //flip_direction
+};
+
+ControllerMobile.prototype.onTouchEnd = function(event){
+  this.previousY = undefined;
+};
+
+ControllerMobile.prototype.onTouchMove = function(event, manuel){
+  if(this.isActive) {
+    if (this.disableDefault) {
+      event.preventDefault();
+    }
+    
+    var scope = event.data.scope;
+    var targetEvent = manuel ? event : event.originalEvent.touches.item(0);    
+    
+    if(scope.previousY === undefined) {
+      scope.previousY = targetEvent.clientY;
+    }
+    else
+    {
+      scope.y += (targetEvent.clientY - scope.previousY);
+      scope.y = scope.y < scope.height ? scope.y : scope.height;
+      scope.y = scope.y > 0 ? scope.y : 0;
+      scope.previousY = targetEvent.clientY;
+      var poss = scope.y/scope.height;
+      
+      scope.jarallax.setProgress(scope.y/scope.height);
+    }
+  }
+};
+
+
+ControllerMobile.prototype.deactivate = function(jarallax){
+  JarallaxController.prototype.deactivate.call(this, jarallax);
+  $('body').unbind('touchmove');
+};
+
+ControllerMobile.prototype.update = function(progress){
+  //empty
+};
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Scroll controller ///////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+ControllerScroll = function(smoothing, scrollSpace) {
+  this.target = $(window);
+  $(window).scrollTop(0);
+  this.height = parseInt($("body").css('height'),10);
+  this.scrollSpace = scrollSpace || this.height - this.target.height();
+
+  if (this.scrollSpace < 10) {
+    this.height = parseInt($("#wrapper").css('height'),10);
+    this.scrollSpace = this.height - this.target.height();
+  }
+
+  this.smoothing = smoothing || false;
+
+  this.targetProgress = 0;
+};
+
+ControllerScroll.prototype = new JarallaxController();
+
+ControllerScroll.prototype.activate = function(jarallax) {
+  JarallaxController.prototype.activate.call(this, jarallax);
+  this.target.bind('scroll', {scope: this} , this.onScroll);
+};
+
+ControllerScroll.prototype.deactivate = function(jarallax) {
+  JarallaxController.prototype.deactivate.call(this, jarallax);
+  this.target.unbind('scroll');
+};
+
+ControllerScroll.prototype.onScroll = function(event) {
+  var controller = event.data.scope;
+
+  if(controller.jarallax.jumping){
+    if(!controller.jarallax.jumping_allowed) {
+      controller.jarallax.clearSmooth(controller.jarallax);
+    }
+  }
+
+  if (controller.isActive) {
+    var y = event.data.y || controller.target.scrollTop();
+    var progress = y/controller.scrollSpace;
+
+    if(!controller.smoothing){
+      controller.jarallax.setProgress(progress, true);
+    } else {
+      controller.targetProgress = progress;
+      controller.smooth();
+    }
+  }
+};
+
+ControllerScroll.prototype.smooth = function(externalScope) {
+  var scope;
+  if (!externalScope) {
+    scope = this;
+  } else {
+    scope = externalScope;
+  }
+
+  var oldProgress = scope.jarallax.progress;
+
+  var animationSpace =  scope.targetProgress - oldProgress;
+  clearTimeout(scope.timer);
+
+  if(animationSpace > 0.0001 || animationSpace < -0.0001){
+    var newProgress = oldProgress + animationSpace / 5;
+
+    scope.timer = window.setTimeout(function(){
+        scope.smooth(scope);}, scope.jarallax.FPS_INTERVAL);
+    scope.jarallax.setProgress(newProgress, true);
+  }else{
+    scope.jarallax.setProgress(scope.targetProgress, true);
+  }
+};
+
+ControllerScroll.prototype.update = function(progress) {
+  var scrollPosition = progress * this.scrollSpace;
+
+  if(!this.jarallax.allowWeakProgress) {
+    $(window).scrollTop(scrollPosition);
+  }
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -921,213 +1070,6 @@ ControllerKeyboard.prototype.update = function(progress) {
 };
 
 ////////////////////////////////////////////////////////////////////////////////
-// Mobile controller ///////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-ControllerMobile = function(disableDefault, height){
-  this.disableDefault = disableDefault || false;
-  this.y = 0;
-  this.previousY = undefined;
-  this.height = height;
-};
-
-ControllerMobile.prototype = new JarallaxController();
-
-ControllerMobile.prototype.activate = function(jarallax){
-  JarallaxController.prototype.activate.call(this, jarallax);
-  
-  if (!this.height) {
-    this.height = this.height = parseInt($("body").css('height'),10);
-    if (this.height ==  $(window).height) {
-      this.height = parseInt($("#wrapper").css('height'),10);
-    }
-  }
-  $('body').bind('touchmove', {scope: this}, this.onTouchMove);
-  $('body').bind('touchend', {scope: this}, this.onTouchEnd);
-  //TODO:
-  //horizontal scrolling
-  //flip_direction
-};
-
-ControllerMobile.prototype.onTouchEnd = function(event){
-  this.previousY = undefined;
-};
-
-ControllerMobile.prototype.onTouchMove = function(event, manuel){
-  if(this.isActive) {
-    if (this.disableDefault) {
-      event.preventDefault();
-    }
-    
-    var scope = event.data.scope;
-    var targetEvent = manuel ? event : event.originalEvent.touches.item(0);    
-    
-    if(scope.previousY === undefined) {
-      scope.previousY = targetEvent.clientY;
-    }
-    else
-    {
-      scope.y += (targetEvent.clientY - scope.previousY);
-      scope.y = scope.y < scope.height ? scope.y : scope.height;
-      scope.y = scope.y > 0 ? scope.y : 0;
-      scope.previousY = targetEvent.clientY;
-      var poss = scope.y/scope.height;
-      
-      scope.jarallax.setProgress(scope.y/scope.height);
-    }
-  }
-};
-
-
-ControllerMobile.prototype.deactivate = function(jarallax){
-  JarallaxController.prototype.deactivate.call(this, jarallax);
-  $('body').unbind('touchmove');
-};
-
-ControllerMobile.prototype.update = function(progress){
-  //empty
-};
-
-
-////////////////////////////////////////////////////////////////////////////////
-// Mousewheel controller ///////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-ControllerMousewheel = function(sensitivity, preventDefault){
-  this.sensitivity = -sensitivity;
-  this.preventDefault = preventDefault || false;
-};
-
-
-ControllerMousewheel.prototype = new JarallaxController();
-
-ControllerMousewheel.prototype.activate = function(jarallax){
-  JarallaxController.prototype.activate.call(this, jarallax);
-  $('body').bind('mousewheel', {scope: this} , this.onScroll);
-};
-
-ControllerMousewheel.prototype.deactivate = function(jarallax){
-  $('body').unbind('mousewheel');
-  JarallaxController.prototype.deactivate(this, jarallax);
-};
-
-ControllerMousewheel.prototype.onScroll = function(event, delta){
-  var controller = event.data.scope;
-  
-  if (controller.isActive) {
-    controller.jarallax.setProgress(controller.jarallax.progress + controller.sensitivity * delta);
-    if(controller.preventDefault){
-      event.preventDefault(); 
-    }
-  }
-};
-
-ControllerMousewheel.prototype.update = function(progress){
-  //empty
-};
-
-////////////////////////////////////////////////////////////////////////////////
-// Scroll controller ///////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-ControllerScroll = function(smoothing, horizontal, convertScroll) {
-  this.target = $(window);
-  this.horizontal = horizontal;
-  this.convertScroll = convertScroll;
-  $(window).scrollTop(0);
-  $(window).scrollLeft(0);
-  
-  if (!horizontal) {
-    var height = parseInt($("body").css('height'),10);
-    this.scrollSpace = height - this.target.height();
-  } else {
-    var width = parseInt($("body").css('width'),10);
-    this.scrollSpace = width - this.target.width();
-  }
-  
-  this.smoothing = smoothing || false;
-  this.targetProgress = 0;
-};
-
-ControllerScroll.prototype = new JarallaxController();
-
-ControllerScroll.prototype.activate = function(jarallax) {
-  JarallaxController.prototype.activate.call(this, jarallax);
-  if (this.convertScroll) {
-    scrollConverter.activate();
-  }
-  this.target.bind('scroll', {scope: this} , this.onScroll);
-};
-
-ControllerScroll.prototype.deactivate = function(jarallax) {
-  JarallaxController.prototype.deactivate.call(this, jarallax);
-  if (this.convertScroll) {
-    scrollConverter.deactivate();
-  }
-  this.target.unbind('scroll');
-};
-
-ControllerScroll.prototype.onScroll = function(event) {
-  var controller = event.data.scope;
-  //console.log(controller.target.scrollTop());
-  
-  if(controller.jarallax.jumping){
-    if(!controller.jarallax.jumpingAllowed) {
-      controller.jarallax.clearSmooth(controller.jarallax);
-    }
-  }
-
-  if (controller.isActive) {
-    var progress;
-    if (!controller.horizontal) {
-      var y = event.data.y || controller.target.scrollTop();
-      progress = y/controller.scrollSpace;
-    } else {
-      var x = event.data.x || controller.target.scrollLeft();
-      progress = x/controller.scrollSpace;
-    }
-    
-    if(!controller.smoothing){
-      controller.jarallax.setProgress(progress, true);
-    } else {
-      controller.targetProgress = Math.min(progress, 1);
-      controller.smooth();
-    }
-  }
-};
-
-ControllerScroll.prototype.smooth = function(externalScope) {
-  var scope;
-  if (!externalScope) {
-    scope = this;
-  } else {
-    scope = externalScope;
-  }
-
-  var oldProgress = scope.jarallax.progress;
-  var animationSpace =  scope.targetProgress - oldProgress;
-  clearTimeout(scope.timer);
-
-  if(animationSpace > 0.0001 || animationSpace < -0.0001){
-    var newProgress = oldProgress + animationSpace / 5;
-
-    scope.timer = window.setTimeout(function(){
-        scope.smooth(scope);}, scope.jarallax.FPS_INTERVAL);
-    scope.jarallax.setProgress(newProgress, true);
-  }else{
-    scope.jarallax.setProgress(scope.targetProgress, true);
-  }
-};
-
-ControllerScroll.prototype.update = function(progress) {
-  var scrollPosition = parseInt(progress * this.scrollSpace, 10);
-  if(!this.jarallax.allowWeakProgress) {
-    if (this.horizontal) {
-      $(window).scrollLeft(scrollPosition);
-    } else {
-      $(window).scrollTop(scrollPosition);
-    }
-  }
-};
-
-////////////////////////////////////////////////////////////////////////////////
 // Time controller /////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ControllerTime = function(speed, interval, type) {
@@ -1191,510 +1133,38 @@ ControllerTime.prototype.update = function(progress) {
   this.progress = progress;
 };
 
-// VERSION: 2.2 LAST UPDATE: 13.03.2012
-/* 
- * Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
- * 
- * Made by Wilq32, wilq32@gmail.com, Wroclaw, Poland, 01.2009
- * Website: http://code.google.com/p/jqueryrotate/ 
- */
+////////////////////////////////////////////////////////////////////////////////
+// Mousewheel controller ///////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+ControllerMousewheel = function(sensitivity, preventDefault){
+  this.sensitivity = -sensitivity;
+  this.preventDefault = preventDefault || false;
+};
 
-// Documentation removed from script file (was kinda useless and outdated)
 
-(function($) {
-var supportedCSS,styles=document.getElementsByTagName("head")[0].style,toCheck="transformProperty WebkitTransform OTransform msTransform MozTransform".split(" ");
-for (var a=0;a<toCheck.length;a++) if (styles[toCheck[a]] !== undefined) supportedCSS = toCheck[a];
-// Bad eval to preven google closure to remove it from code o_O
-// After compresion replace it back to var IE = 'v' == '\v'
-var IE = eval('"v"=="\v"');
+ControllerMousewheel.prototype = new JarallaxController();
 
-jQuery.fn.extend({
-    rotate:function(parameters)
-    {
-        if (this.length===0||typeof parameters=="undefined") return;
-            if (typeof parameters=="number") parameters={angle:parameters};
-        var returned=[];
-        for (var i=0,i0=this.length;i<i0;i++)
-            {
-                var element=this.get(i);	
-                if (!element.Wilq32 || !element.Wilq32.PhotoEffect) {
+ControllerMousewheel.prototype.activate = function(jarallax){
+  JarallaxController.prototype.activate.call(this, jarallax);
+  $('body').bind('mousewheel', {scope: this} , this.onScroll);
+};
 
-                    var paramClone = $.extend(true, {}, parameters); 
-                    var newRotObject = new Wilq32.PhotoEffect(element,paramClone)._rootObj;
+ControllerMousewheel.prototype.deactivate = function(jarallax){
+  $('body').unbind('mousewheel');
+  JarallaxController.prototype.deactivate(this, jarallax);
+};
 
-                    returned.push($(newRotObject));
-                }
-                else {
-                    element.Wilq32.PhotoEffect._handleRotation(parameters);
-                }
-            }
-            return returned;
-    },
-    getRotateAngle: function(){
-        var ret = [];
-        for (var i=0,i0=this.length;i<i0;i++)
-            {
-                var element=this.get(i);	
-                if (element.Wilq32 && element.Wilq32.PhotoEffect) {
-                    ret[i] = element.Wilq32.PhotoEffect._angle;
-                }
-            }
-            return ret;
-    },
-    stopRotate: function(){
-        for (var i=0,i0=this.length;i<i0;i++)
-            {
-                var element=this.get(i);	
-                if (element.Wilq32 && element.Wilq32.PhotoEffect) {
-                    clearTimeout(element.Wilq32.PhotoEffect._timer);
-                }
-            }
+ControllerMousewheel.prototype.onScroll = function(event, delta){
+  var controller = event.data.scope;
+  
+  if (controller.isActive) {
+    controller.jarallax.setProgress(controller.jarallax.progress + controller.sensitivity * delta);
+    if(controller.preventDefault){
+      event.preventDefault(); 
     }
-});
+  }
+};
 
-// Library agnostic interface
-
-Wilq32=window.Wilq32||{};
-Wilq32.PhotoEffect=(function(){
-
-	if (supportedCSS) {
-		return function(img,parameters){
-			img.Wilq32 = {
-				PhotoEffect: this
-			};
-            
-            this._img = this._rootObj = this._eventObj = img;
-            this._handleRotation(parameters);
-		}
-	} else {
-		return function(img,parameters) {
-			// Make sure that class and id are also copied - just in case you would like to refeer to an newly created object
-            this._img = img;
-
-			this._rootObj=document.createElement('span');
-			this._rootObj.style.display="inline-block";
-			this._rootObj.Wilq32 = 
-				{
-					PhotoEffect: this
-				};
-			img.parentNode.insertBefore(this._rootObj,img);
-			
-			if (img.complete) {
-				this._Loader(parameters);
-			} else {
-				var self=this;
-				// TODO: Remove jQuery dependency
-				jQuery(this._img).bind("load", function()
-				{
-					self._Loader(parameters);
-				});
-			}
-		}
-	}
-})();
-
-Wilq32.PhotoEffect.prototype={
-    _setupParameters : function (parameters){
-		this._parameters = this._parameters || {};
-        if (typeof this._angle !== "number") this._angle = 0 ;
-        if (typeof parameters.angle==="number") this._angle = parameters.angle;
-        this._parameters.animateTo = (typeof parameters.animateTo==="number") ? (parameters.animateTo) : (this._angle); 
-
-        this._parameters.step = parameters.step || this._parameters.step || null;
-		this._parameters.easing = parameters.easing || this._parameters.easing || function (x, t, b, c, d) { return -c * ((t=t/d-1)*t*t*t - 1) + b; }
-		this._parameters.duration = parameters.duration || this._parameters.duration || 1000;
-        this._parameters.callback = parameters.callback || this._parameters.callback || function(){};
-        if (parameters.bind && parameters.bind != this._parameters.bind) this._BindEvents(parameters.bind); 
-	},
-	_handleRotation : function(parameters){
-          this._setupParameters(parameters);
-          if (this._angle==this._parameters.animateTo) {
-              this._rotate(this._angle);
-          }
-          else { 
-              this._animateStart();          
-          }
-	},
-
-	_BindEvents:function(events){
-		if (events && this._eventObj) 
-		{
-            // Unbinding previous Events
-            if (this._parameters.bind){
-                var oldEvents = this._parameters.bind;
-                for (var a in oldEvents) if (oldEvents.hasOwnProperty(a)) 
-                        // TODO: Remove jQuery dependency
-                        jQuery(this._eventObj).unbind(a,oldEvents[a]);
-            }
-
-            this._parameters.bind = events;
-			for (var a in events) if (events.hasOwnProperty(a)) 
-				// TODO: Remove jQuery dependency
-					jQuery(this._eventObj).bind(a,events[a]);
-		}
-	},
-
-	_Loader:(function()
-	{
-		if (IE)
-		return function(parameters)
-		{
-			var width=this._img.width;
-			var height=this._img.height;
-			this._img.parentNode.removeChild(this._img);
-							
-			this._vimage = this.createVMLNode('image');
-			this._vimage.src=this._img.src;
-			this._vimage.style.height=height+"px";
-			this._vimage.style.width=width+"px";
-			this._vimage.style.position="absolute"; // FIXES IE PROBLEM - its only rendered if its on absolute position!
-			this._vimage.style.top = "0px";
-			this._vimage.style.left = "0px";
-
-			/* Group minifying a small 1px precision problem when rotating object */
-			this._container =  this.createVMLNode('group');
-			this._container.style.width=width;
-			this._container.style.height=height;
-			this._container.style.position="absolute";
-			this._container.setAttribute('coordsize',width-1+','+(height-1)); // This -1, -1 trying to fix ugly problem with small displacement on IE
-			this._container.appendChild(this._vimage);
-			
-			this._rootObj.appendChild(this._container);
-			this._rootObj.style.position="relative"; // FIXES IE PROBLEM
-			this._rootObj.style.width=width+"px";
-			this._rootObj.style.height=height+"px";
-			this._rootObj.setAttribute('id',this._img.getAttribute('id'));
-			this._rootObj.className=this._img.className;			
-		    this._eventObj = this._rootObj;	
-		    this._handleRotation(parameters);	
-		}
-		else
-		return function (parameters)
-		{
-			this._rootObj.setAttribute('id',this._img.getAttribute('id'));
-			this._rootObj.className=this._img.className;
-			
-			this._width=this._img.width;
-			this._height=this._img.height;
-			this._widthHalf=this._width/2; // used for optimisation
-			this._heightHalf=this._height/2;// used for optimisation
-			
-			var _widthMax=Math.sqrt((this._height)*(this._height) + (this._width) * (this._width));
-
-			this._widthAdd = _widthMax - this._width;
-			this._heightAdd = _widthMax - this._height;	// widthMax because maxWidth=maxHeight
-			this._widthAddHalf=this._widthAdd/2; // used for optimisation
-			this._heightAddHalf=this._heightAdd/2;// used for optimisation
-			
-			this._img.parentNode.removeChild(this._img);	
-			
-			this._aspectW = ((parseInt(this._img.style.width,10)) || this._width)/this._img.width;
-			this._aspectH = ((parseInt(this._img.style.height,10)) || this._height)/this._img.height;
-			
-			this._canvas=document.createElement('canvas');
-			this._canvas.setAttribute('width',this._width);
-			this._canvas.style.position="relative";
-			this._canvas.style.left = -this._widthAddHalf + "px";
-			this._canvas.style.top = -this._heightAddHalf + "px";
-			this._canvas.Wilq32 = this._rootObj.Wilq32;
-			
-			this._rootObj.appendChild(this._canvas);
-			this._rootObj.style.width=this._width+"px";
-			this._rootObj.style.height=this._height+"px";
-            this._eventObj = this._canvas;
-			
-			this._cnv=this._canvas.getContext('2d');
-            this._handleRotation(parameters);
-		}
-	})(),
-
-	_animateStart:function()
-	{	
-		if (this._timer) {
-			clearTimeout(this._timer);
-		}
-		this._animateStartTime = +new Date;
-		this._animateStartAngle = this._angle;
-		this._animate();
-	},
-    _animate:function()
-    {
-         var actualTime = +new Date;
-         var checkEnd = actualTime - this._animateStartTime > this._parameters.duration;
-
-         // TODO: Bug for animatedGif for static rotation ? (to test)
-         if (checkEnd && !this._parameters.animatedGif) 
-         {
-             clearTimeout(this._timer);
-         }
-         else 
-         {
-             if (this._canvas||this._vimage||this._img) {
-                 var angle = this._parameters.easing(0, actualTime - this._animateStartTime, this._animateStartAngle, this._parameters.animateTo - this._animateStartAngle, this._parameters.duration);
-                 this._rotate((~~(angle*10))/10);
-             }
-             if (this._parameters.step) {
-                this._parameters.step(this._angle);
-             }
-             var self = this;
-             this._timer = setTimeout(function()
-                     {
-                     self._animate.call(self);
-                     }, 10);
-         }
-
-         // To fix Bug that prevents using recursive function in callback I moved this function to back
-         if (this._parameters.callback && checkEnd){
-             this._angle = this._parameters.animateTo;
-             this._rotate(this._angle);
-             this._parameters.callback.call(this._rootObj);
-         }
-     },
-
-	_rotate : (function()
-	{
-		var rad = Math.PI/180;
-		if (IE)
-		return function(angle)
-		{
-            this._angle = angle;
-			this._container.style.rotation=(angle%360)+"deg";
-		}
-		else if (supportedCSS)
-		return function(angle){
-            this._angle = angle;
-			this._img.style[supportedCSS]="rotate("+(angle%360)+"deg)";
-		}
-		else 
-		return function(angle)
-		{
-            this._angle = angle;
-			angle=(angle%360)* rad;
-			// clear canvas	
-			this._canvas.width = this._width+this._widthAdd;
-			this._canvas.height = this._height+this._heightAdd;
-						
-			// REMEMBER: all drawings are read from backwards.. so first function is translate, then rotate, then translate, translate..
-			this._cnv.translate(this._widthAddHalf,this._heightAddHalf);	// at least center image on screen
-			this._cnv.translate(this._widthHalf,this._heightHalf);			// we move image back to its orginal 
-			this._cnv.rotate(angle);										// rotate image
-			this._cnv.translate(-this._widthHalf,-this._heightHalf);		// move image to its center, so we can rotate around its center
-			this._cnv.scale(this._aspectW,this._aspectH); // SCALE - if needed ;)
-			this._cnv.drawImage(this._img, 0, 0);							// First - we draw image
-		}
-
-	})()
-}
-
-if (IE)
-{
-Wilq32.PhotoEffect.prototype.createVMLNode=(function(){
-document.createStyleSheet().addRule(".rvml", "behavior:url(#default#VML)");
-		try {
-			!document.namespaces.rvml && document.namespaces.add("rvml", "urn:schemas-microsoft-com:vml");
-			return function (tagName) {
-				return document.createElement('<rvml:' + tagName + ' class="rvml">');
-			};
-		} catch (e) {
-			return function (tagName) {
-				return document.createElement('<' + tagName + ' xmlns="urn:schemas-microsoft.com:vml" class="rvml">');
-			};
-		}		
-})();
-}
-
-})(jQuery);
-
-/*
-scrollConverter 1.0
-https://github.com/koggdal/scroll-converter
-
-Copyright 2011 Johannes Koggdal (http://koggdal.com/)
-Developed for BombayWorks (http://bombayworks.com/)
-
-Released under MIT license
-*/
-
-window.scrollConverter = (function (window, document, undefined) {
-
-	// Private vars
-	var docElem = document.documentElement,
-		active = false,
-		hasDeactivated = false,
-		eventsBound = false;
-
-	// Private methods
-	var scrollCallback = function (offset, event, callback) {
-
-			// Abort the scrolling if it's inactive
-			if (!active) {
-				return;
-			}
-
-			var delta, numPixelsPerStep, change, newOffset,
-				docOffset, scrollWidth, winWidth, maxOffset;
-
-			// Set scrolling parameters
-			delta = 0;
-			numPixelsPerStep = 10;
-
-			// Find the maximum offset for the scroll
-			docOffset = (docElem ? docElem.offsetWidth : 0) || 0;
-			scrollWidth = document.body.scrollWidth || 0;
-			winWidth = docElem ? docElem.clientWidth : 0;
-			maxOffset = Math.max(docOffset, scrollWidth) - winWidth;
-
-			// "Normalize" the wheel value across browsers
-			//  The delta value after this will not be the same for all browsers.
-			//  Instead, it is normalized in a way to try to give a pretty similar feeling in all browsers.
-			// 
-			//  Firefox and Opera
-			if (event.detail) {
-				delta = event.detail * -240;
-			}
-			// IE, Safari and Chrome
-			else if (event.wheelDelta) {
-				delta = event.wheelDelta * 5;
-			}
-
-			// Get the real offset change from the delta
-			//  A positive change is when the user scrolled the wheel up (in regular scrolling direction)
-			//  A negative change is when the user scrolled the wheel down
-			change = delta / 120 * numPixelsPerStep;
-			newOffset = offset.x - change;
-
-			// Do the scroll if the new offset is positive
-			if (newOffset >= 0 && newOffset <= maxOffset) {
-				offset.x = newOffset;
-				offset.setByScript = true;
-				window.scrollTo(offset.x, offset.y);
-			}
-			// Keep the offset within the boundaries
-			else if (offset.x !== 0 && offset.x !== maxOffset) {
-				offset.x = newOffset > maxOffset ? maxOffset : 0;
-				offset.setByScript = true;
-				window.scrollTo(offset.x, offset.y);
-			}
-
-			// Fire the callback
-			if (typeof callback === "function") {
-				callback(offset);
-			}
-		},
-
-		getOffset = function (axis) {
-			axis = axis.toUpperCase();
-			var pageOffset = "page" + axis + "Offset",
-				scrollValue = "scroll" + axis,
-				scrollDir = "scroll" + (axis === "X" ? "Left" : "Top");
-
-			// Get the scroll offset for all browsers
-			return window[pageOffset] || window[scrollValue] || (function () {
-				var rootElem = document.documentElement || document.body.parentNode;
-				return ((typeof rootElem[scrollDir] === "number") ? rootElem : document.body)[scrollDir];
-			}());
-		},
-
-		bindEvents = function (offset, cb) {
-
-			var callback = function (e) {
-
-					// Fix event object for IE8 and below
-					e = e || window.event;
-
-					// Trigger the scroll behavior
-					scrollCallback(offset, e, cb);
-
-					// Prevent the normal scroll action to happen
-					if (e.preventDefault && e.stopPropagation) {
-						e.preventDefault();
-						e.stopPropagation();
-					} else {
-						return false;
-					}
-				},
-
-				updateOffsetOnScroll = function () {
-
-					// Update the offset variable when the normal scrollbar is used
-					if (!offset.setByScript) {
-						offset.x = getOffset("x");
-						offset.y = getOffset("y");
-					}
-					offset.setByScript = false;
-				};
-
-			// Safari, Chrome, Opera, IE9+
-			if (window.addEventListener) {
-
-				// Safari, Chrome, Opera, IE9
-				if ("onmousewheel" in window) {
-					window.addEventListener("mousewheel", callback, false);
-					window.addEventListener("scroll", updateOffsetOnScroll, false);
-				}
-				// Firefox
-				else {
-					window.addEventListener("DOMMouseScroll", callback, false);
-					window.addEventListener("scroll", updateOffsetOnScroll, false);
-				}
-			}
-			// IE8 and below
-			else {
-				document.attachEvent("onmousewheel", callback);
-				window.attachEvent("onscroll", updateOffsetOnScroll);
-			}
-		},
-
-		deactivateScrolling = function (e) {
-			e.preventDefault();
-			e.stopPropagation();
-			return false;
-		};
-
-	// Return a public API
-	return {
-
-		// Activate the scrolling switch
-		//  An optional callback can be passed in, which will fire at every scroll update
-		activate: function (callback) {
-
-			// Set state
-			active = true;
-
-			// Bind events if it hasn't been done before
-			if (!eventsBound) {
-				var offset = { x: 0, y: 0 };
-				bindEvents(offset, callback);
-				eventsBound = true;
-			}
-
-			// Remove event handlers if it was previously deactivated
-			if (hasDeactivated) {
-				if (window.addEventListener) {
-					window.removeEventListener("scroll", deactivateScrolling, true);
-				} else {
-					window.detachEvent("onscroll", deactivateScrolling);
-				}
-				hasDeactivated = false;
-			}
-		},
-
-		deactivate: function () {
-			active = false;
-		},
-
-		deactivateAllScrolling: function () {
-
-			// Set state
-			active = false;
-			hasDeactivated = true;
-
-			// Bind event handlers to disable the scroll
-			if (window.addEventListener) {
-				window.addEventListener("scroll", deactivateScrolling, true);
-			} else {
-				window.attachEvent("onscroll", deactivateScrolling);
-			}
-		}
-	};
-}(window, document));
+ControllerMousewheel.prototype.update = function(progress){
+  //empty
+};
