@@ -1,4 +1,5 @@
-<footer class="container-fluid text-center">
+<!-- <footer class="container-fluid text-center"> -->
+  <footer>
   <div class="main-footer">
     <p id="copiriri"> <span class="glyphicon glyphicon-copyright-mark"></span> Copyright- Nicolas de Liedekerke </p>
   </div>
