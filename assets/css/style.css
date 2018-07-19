@@ -496,5 +496,9 @@ footer {
 }
 
 .container {
-  background: #181818;
+  background: #0000005e;
+}
+
+body {
+  color: white;
 }
