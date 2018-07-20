@@ -52,16 +52,16 @@
   <div class="container">
     <div class="row">
       <div class="col-6 col-md-3">
-        <img src="/assets/images/imagetest.png" class="img-fluid">
+        <img src="/assets/images/imagetest.jpg" class="img-fluid">
       </div>
       <div class="col-6 col-md-3">
-        <img src="/assets/buttons/potions.png" class="img-fluid">
+        <img src="/assets/buttons/imagetest.jpg" class="img-fluid">
       </div>
       <div class="col-6 col-md-3">
-        <img src="/assets/buttons/new-to-raids.png" class="img-fluid">
+        <img src="/assets/buttons/imagetest.jpg" class="img-fluid">
       </div>
       <div class="col-6 col-md-3">
-        <img src="/assets/buttons/social.png" class="img-fluid">
+        <img src="/assets/buttons/imagetest.jpg" class="img-fluid">
       </div>
     </div>
   </div>
