@@ -382,7 +382,7 @@ form label {
 }
 
 .bg-sc-dark {
-  background-color: #181818 !important;
+  background-color: black !important;
 }
 
 /*NAVIGATION TABS*/
@@ -490,9 +490,9 @@ footer {
 /* DARK */
 
 .container-dark {
-  background: #212121;
+  background: black;
   padding-top: 1rem;
-  border-top: 24px solid #181818;
+  border-top: 24px solid black;
 }
 
 .container {
@@ -501,10 +501,4 @@ footer {
 
 body {
   color: white;
-}
-#dk-image1{
-  height: 112.56px;
-}
-#dk-image2{
-  height: 112.56px;
 }

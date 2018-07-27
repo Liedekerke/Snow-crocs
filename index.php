@@ -52,10 +52,10 @@
   <div class="container">
     <div class="row">
       <div class="col-6 col-md-3">
-        <img src="/assets/images/image5.jpg" class="img-fluid" id="dk-image1">
+        <img src="/assets/images/image5.jpg" class="img-fluid">
       </div>
       <div class="col-6 col-md-3">
-        <img src="/assets/images/image3.jpg" class="img-fluid" id="dk-image2">
+        <img src="/assets/images/image3.jpg" class="img-fluid">
       </div>
       <div class="col-6 col-md-3">
         <img src="/assets/images/image4.jpg" class="img-fluid">
