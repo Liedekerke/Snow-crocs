@@ -17,11 +17,11 @@
     <div class="bg-dark text-white" id="entree">
       <h2 class="soustitre">Entrée</h2>
       <div class="container-fluid"
-      <p class="col-sm-10 col-md-10 col-lg-10">Tomate Crevettes Grises – revisitée – // Millefeuille / Persil / Sablé
-         <span id="bad1" class="badge col-sm-2 col-md-2 col-lg-2"> 400€</span>
+      <p class="col-sm-6 col-md-6 col-lg-6">Tomate Crevettes Grises – revisitée – // Millefeuille / Persil / Sablé
+         <span id="bad1" class="badge col-sm-6 col-md-6 col-lg-6"> 400€</span>
        </a><br>
         Foie Gras de Canard – mi-cuit – // Gelée Gingembre / Chutney Airelles / Brioche
-        <span id="bad2" class="badge col-sm-2 col-md-2 col-lg-2">401€</span>
+        <span id="bad2" class="badge col-sm-6 col-md-6 col-lg-6">401€</span>
       </a><br>
     </p>
   </div>
