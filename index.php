@@ -17,7 +17,7 @@
 
 
 <!-- BG -->
-<div class="jarallax jarallax-home" style="background-image: url('/assets/images/bg1.jpg');">
+<div class="jarallax jarallax-home" style="background-image: url('/assets/images/bg2.jpg');">
 
 </div>
 
@@ -52,10 +52,10 @@
   <div class="container">
     <div class="row">
       <div class="col-6 col-md-3">
-        <img src="/assets/images/image5.jpg" class="img-fluid">
+        <img src="/assets/images/image5.jpg" class="img-fluid" id="dk-image1">
       </div>
       <div class="col-6 col-md-3">
-        <img src="/assets/images/image3.jpg" class="img-fluid">
+        <img src="/assets/images/image3.jpg" class="img-fluid" id="dk-image2">
       </div>
       <div class="col-6 col-md-3">
         <img src="/assets/images/image4.jpg" class="img-fluid">
