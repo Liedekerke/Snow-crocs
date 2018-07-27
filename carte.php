@@ -21,7 +21,7 @@
          <span id="bad1" class="badge col-sm-5 col-md-5 col-lg-5"> 400€</span>
        </a><br>
         Foie Gras de Canard – mi-cuit – // Gelée Gingembre / Chutney Airelles / Brioche
-        <span id="bad2" class="badge col-sm-5 col-md-5 col-lg-5">401€</span>5
+        <span id="bad2" class="badge col-sm-5 col-md-5 col-lg-5">401€</span>
       </a><br>
     </p>
   </div>
