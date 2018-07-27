@@ -69,7 +69,7 @@
 
 <div class="jarallax jarallax-about" style="background-image: url('/assets/images/splshart2.jpg');">
   <div class="container">
-    <div class="row">
+    <div class="row" id="row-dk">
       <div class="col-12 col-md-6">
 
         <div class="embed-responsive embed-responsive-16by9">
