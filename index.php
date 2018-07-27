@@ -52,16 +52,16 @@
   <div class="container">
     <div class="row">
       <div class="col-6 col-md-3">
-        <img src="/assets/images/image5.jpg" class="img-fluid">
+        <img src="/assets/images/dk1.jpg" class="img-fluid">
       </div>
       <div class="col-6 col-md-3">
-        <img src="/assets/images/image3.jpg" class="img-fluid">
-      </div>
-      <div class="col-6 col-md-3">
-        <img src="/assets/images/image4.jpg" class="img-fluid">
+        <img src="/assets/images/dk2.jpg" class="img-fluid">
       </div>
       <div class="col-6 col-md-3">
         <img src="/assets/images/image2.jpg" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="/assets/images/dk3.jpg" class="img-fluid">
       </div>
     </div>
   </div>
