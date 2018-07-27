@@ -1,9 +1,7 @@
 <?php include('assets/includes/head.php'); ?>
 
-<!-- <script type="text/javascript" src="assets/js/jarallax-0.2.1.js"></script> -->
 
-
-  <title>oui</title>
+  <title>Accueil</title>
 </head>
 
 <body>
@@ -13,40 +11,12 @@
 <?php include('assets/includes/header.php'); ?>
 
 <!-- MAIN -->
-<!-- <main> -->
 
 
-<!-- BG -->
 <div class="jarallax jarallax-home" style="background-image: url('/assets/images/bg2.jpg');">
 
 </div>
 
-<!-- <div class="container-fluid container-dark" style="border-bottom: 24px solid #181818;padding-bottom:0px;">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-sm-6 col-md-3">
-        <a href="carte.php">
-        <img src="assets/images/image4.jpg" class="img-fluid img-max img-home-button">
-        </a>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3">
-        <a href="photo.php">
-        <img src="assets/images/image4.jpg" class="img-fluid img-max img-home-button">
-        </a>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3">
-        <a href="restaurant.php">
-        <img src="assets/images/image4.jpg" class="img-fluid img-max img-home-button">
-        </a>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3">
-        <a href="contact.php" target="_blank">
-        <img src="assets/images/image2.jpg" class="img-fluid img-max img-home-button">
-        </a>
-      </div>
-    </div>
-  </div>
-</div> -->
 
 <div class="container-fluid container-dark hidden" style="border-bottom: 24px solid black;padding-bottom:15px;">
   <div class="container">
@@ -98,23 +68,6 @@
     </div>
   </div>
 </div>
-
-
-
-<!-- </main> -->
-    <!-- <div class="container-fluid">
-
-      <div class="panel panel-info" style="background:black !important">
-        <div id="panelOne">
-          <div class="panel-heading">-30% sur la pate !!!</div>
-          <div class="panel-body"><img src="assets/images/dessert1.jpg" alt="dessert1" id="dessert1" /></div>
-        </div>
-        <div id="panelTow">
-          <div class="panel-heading">-2% sur le plaisir !!!</div>
-          <div class="panel-body"><img src="assets/images/dessert3.jpg" alt="dessert3" id="dessert3" /></div>
-        </div>
-      </div>
-    </div> -->
 
 
 
