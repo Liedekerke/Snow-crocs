@@ -55,13 +55,13 @@
         <img src="/assets/images/imagetest.jpg" class="img-fluid">
       </div>
       <div class="col-6 col-md-3">
-        <img src="/assets/images/image5.jpg" class="img-fluid">
+        <img src="/assets/images/splashart.jpg" class="img-fluid">
       </div>
       <div class="col-6 col-md-3">
-        <img src="/assets/images/image5.jpg" class="img-fluid">
+        <img src="/assets/images/image4.jpg" class="img-fluid">
       </div>
       <div class="col-6 col-md-3">
-        <img src="/assets/images/image5.jpg" class="img-fluid">
+        <img src="/assets/images/image2.jpg" class="img-fluid">
       </div>
     </div>
   </div>
