@@ -27,4 +27,4 @@
 
 <meta name="theme-color" content="#317EFB"/>
 <meta name="Description" content="oui"/>
-<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="assets/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
