@@ -48,7 +48,7 @@
   </div>
 </div> -->
 
-<div class="container-fluid container-dark hidden" style="border-bottom: 24px solid #181818;padding-bottom:15px;">
+<div class="container-fluid container-dark hidden" style="border-bottom: 24px solid black;padding-bottom:15px;">
   <div class="container">
     <div class="row">
       <div class="col-6 col-md-3">
