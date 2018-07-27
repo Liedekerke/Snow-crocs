@@ -382,7 +382,7 @@ form label {
 }
 
 .bg-sc-dark {
-  background-color: black !important;
+  background-color: #000000 !important;
 }
 
 /*NAVIGATION TABS*/
@@ -449,7 +449,7 @@ jarallax {
 }
 
 footer {
-  background-color: black;
+  background-color: #000000 !important;
   /* margin-top: 4rem; */
   /* margin-top: 35rem; */
   /* padding: 2rem; */
@@ -490,9 +490,9 @@ footer {
 /* DARK */
 
 .container-dark {
-  background: black;
+  background: #000000 !important;
   padding-top: 1rem;
-  border-top: 24px solid black;
+  border-top: 24px solid #000000 !important ;
   border-bottom: 24px solid black;
 }
 
