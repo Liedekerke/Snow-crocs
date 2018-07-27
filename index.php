@@ -50,7 +50,7 @@
 
 <div class="container-fluid container-dark hidden" style="border-bottom: 24px solid black;padding-bottom:15px;">
   <div class="container">
-    <div class="row">
+    <div class="row" id="row-dk">
       <div class="col-6 col-md-3">
         <img src="/assets/images/dk1.jpg" class="img-fluid">
       </div>
@@ -69,7 +69,7 @@
 
 <div class="jarallax jarallax-about" style="background-image: url('/assets/images/splshart2.jpg');">
   <div class="container">
-    <div class="row" id="row-dk">
+    <div class="row">
       <div class="col-12 col-md-6">
 
         <div class="embed-responsive embed-responsive-16by9">
