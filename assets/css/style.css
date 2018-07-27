@@ -449,7 +449,7 @@ jarallax {
 }
 
 footer {
-  background-color: #181818;
+  background-color: black;
   /* margin-top: 4rem; */
   /* margin-top: 35rem; */
   /* padding: 2rem; */
@@ -493,6 +493,7 @@ footer {
   background: black;
   padding-top: 1rem;
   border-top: 24px solid black;
+  border-bottom: 24px solid black;
 }
 
 .container {
