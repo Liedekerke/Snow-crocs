@@ -17,7 +17,7 @@
 
 
 <!-- BG -->
-<div class="jarallax jarallax-home" style="background-image: url('/assets/images/splashart3.jpg');">
+<div class="jarallax jarallax-home" style="background-image: url('/assets/images/bg1.jpg');">
 
 </div>
 
