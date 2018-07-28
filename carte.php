@@ -19,6 +19,7 @@
    </div>
    <div class="container-fluid bg-dark text-white" id="plat">
       <h2 class="soustitre">Plat</h2>
+            <div class="row container">
       <p class="col-sm-9 col-md-9 col-lg-9">
          Solette – façon Ostendaise – // Crevettes Grises / Epinards Frais
       </p>
@@ -33,8 +34,10 @@
       </p>
       <p class=" col-sm-3 col-md-3 col-lg-3 "><span id="bad5" class="badge"> 400€</span></p>
    </div>
+   </div>
    <div class="container-fluid bg-dark text-white" id="dessert">
       <h2 class="soustitre">dessert</h2>
+            <div class="row container">
       <p class="col-sm-9 col-md-9 col-lg-9">
          La Merveilleuse Boule Surprise // Chocolat / Bergamote / Calamansi / Meringue
       </p>
@@ -43,6 +46,7 @@
          Crémeux Chocolat Noir – free gluten & lactose – // Confit Orange / Streusel Noisette
       </p>
       <p class=" col-sm-3 col-md-3 col-lg-3"><span id="bad7" class="badge"> 500€</span></p>
+   </div>
    </div>
    <!-- </section> -->
    <!-- FOOTER -->
