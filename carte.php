@@ -6,6 +6,7 @@
    <?php include('assets/includes/header.php'); ?>
    <!-- MAIN -->
    <!-- <section class="cartouchette"> -->
+   <div class="container"
    <div class="container-fluid bg-dark text-white" id="entree">
       <h2 class="soustitre">Entrée</h2>
       <div class="row container">
@@ -47,6 +48,7 @@
       </p>
       <p class=" col-sm-3 col-md-3 col-lg-3"><span id="bad7" class="badge"> 500€</span></p>
    </div>
+ </div>
    </div>
    <!-- </section> -->
    <!-- FOOTER -->
