@@ -1,63 +1,54 @@
 
 <?php include('assets/includes/head.php'); ?>
-
-  <title>carte</title>
-
+<title>carte</title>
 </head>
-
 <body>
-
-<!-- HEADER -->
-
-<?php include('assets/includes/header.php'); ?>
-
-<!-- MAIN -->
-
-  <!-- <section class="cartouchette"> -->
-    <div class="container-fluid bg-dark text-white" id="entree">
-      <!-- <div class="row "> -->
-      <div class="row container">
+   <!-- HEADER -->
+   <?php include('assets/includes/header.php'); ?>
+   <!-- MAIN -->
+   <!-- <section class="cartouchette"> -->
+   <div class="container-fluid bg-dark text-white" id="entree">
       <h2 class="soustitre">Entrée</h2>
-
-      <p class="col-sm-9 col-md-9 col-lg-9">Tomate Crevettes Grises – revisitée – // Millefeuille / Persil / Sablé</p>
+      <div class="row container">
+         <p class="col-sm-9 col-md-9 col-lg-9">Tomate Crevettes Grises – revisitée – // Millefeuille / Persil / Sablé</p>
          <p class=" col-sm-3 col-md-3 col-lg-3 "><span id="bad1" class="badge"> 400€</span><br></p>
-       <p class="col-sm-9 col-md-9 col-lg-9">
-        Foie Gras de Canard – mi-cuit – // Gelée Gingembre / Chutney Airelles / Brioche</p>
-        <p class=" col-sm-3 col-md-3 col-lg-3"><span id="bad2" class="badge ">401€</span></p>
+         <p class="col-sm-9 col-md-9 col-lg-9">
+            Foie Gras de Canard – mi-cuit – // Gelée Gingembre / Chutney Airelles / Brioche
+         </p>
+         <p class=" col-sm-3 col-md-3 col-lg-3"><span id="bad2" class="badge ">401€</span></p>
       </div>
-    </div>
-  <!-- </div> -->
-    <!-- </div> -->
+   </div>
 
-    <div class="row"  id="plat">
-      <h2 class="soustitre">plat</h2>
-      <p class="col-sm-10 col-md-10 col-lg-10">Solette – façon Ostendaise – // Crevettes Grises / Epinards Frais
-        <span id="bad3" class="badge col-sm-2 col-md-2 col-lg-2">600€</span>
-      </a><br>
-       Chicon au Gratin – revisité – // Fruits Secs / Crème de Vieux Bruges
-       <span id="bad4" class="badge col-sm-2 col-md-2 col-lg-2">666€</span>
-     </a><br>
+
+   <div class="container-fluid bg-dark text-white" id="plat">
+      <h2 class="soustitre">Plat</h2>
+      <p class="col-sm-9 col-md-9 col-lg-9">
+         Solette – façon Ostendaise – // Crevettes Grises / Epinards Frais
+      </p>
+      <p class=" col-sm-3 col-md-3 col-lg-3 "><span id="bad3" class="badge"> 400€</span><br></p>
+      <p class="col-sm-9 col-md-9 col-lg-9">
+         Chicon au Gratin – revisité – // Fruits Secs / Crème de Vieux Bruges
+      </p>
+      <p class=" col-sm-3 col-md-3 col-lg-3"><span id="bad4" class="badge ">401€</span><br></p>
+        <p class="col-sm-9 col-md-9 col-lg-9">
       Bavette de
-        Bœuf – Irish Hereford – // Jus Corsé / Béarnaise / Gros Légumes
-         <span id="bad5" class="badge col-sm-2 col-md-2 col-lg-2">669€</span>
-       </a>
-        </br>
+      Bœuf – Irish Hereford – // Jus Corsé / Béarnaise / Gros Légumes
       </p>
-    </div>
+        <p class=" col-sm-3 col-md-3 col-lg-3 "><span id="bad5" class="badge"> 400€</span></p>
+   </div>
 
-    <div class="row"  id="dessert">
+
+  <div class="container-fluid bg-dark text-white" id="dessert">
       <h2 class="soustitre">dessert</h2>
-      <p class="col-sm-10 col-md-10 col-lg-10">La Merveilleuse Boule Surprise // Chocolat / Bergamote / Calamansi / Meringue
-        <span id="bad6" class="badge col-sm-2 col-md-2 col-lg-2">898€</span>
-      </a><br>
-       Crémeux Chocolat Noir – free gluten & lactose – // Confit Orange / Streusel Noisette
-       <span id="bad7" class="badge col-sm-2 col-md-2 col-lg-2">900€</span></a>
-        </br>
-      </p>
-    </div>
-
-  <!-- </section> -->
-
-<!-- FOOTER -->
-
-<?php include('assets/includes/footer.php'); ?>
+      <p class="col-sm-9 col-md-9 col-lg-9">
+      La Merveilleuse Boule Surprise // Chocolat / Bergamote / Calamansi / Meringue
+    </p>
+          <p class=" col-sm-3 col-md-3 col-lg-3"><span id="bad6" class="badge"> 800€</span><br></p>
+          <p class="col-sm-9 col-md-9 col-lg-9">
+         Crémeux Chocolat Noir – free gluten & lactose – // Confit Orange / Streusel Noisette
+       </p>
+           <p class=" col-sm-3 col-md-3 col-lg-3"><span id="bad7" class="badge"> 500€</span></p>
+   </div>
+   <!-- </section> -->
+   <!-- FOOTER -->
+   <?php include('assets/includes/footer.php'); ?>
