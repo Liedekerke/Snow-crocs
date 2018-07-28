@@ -14,16 +14,16 @@
 <!-- MAIN -->
 
   <!-- <section class="cartouchette"> -->
-    <div class="bg-dark text-white" id="entree">
+    <div class="container-fluid" id="entree">
+      <div class="row bg-dark text-white">
       <h2 class="soustitre">Entrée</h2>
-      <div class="container-fluid"
-      <p class="col-sm-6 col-md-6 col-lg-6">Tomate Crevettes Grises – revisitée – // Millefeuille / Persil / Sablé
-         <span id="bad1" class="badge col-sm-5 col-md-5 col-lg-5"> 400€</span>
-       </a><br>
-        Foie Gras de Canard – mi-cuit – // Gelée Gingembre / Chutney Airelles / Brioche
-        <span id="bad2" class="badge col-sm-5 col-md-5 col-lg-5">401€</span>
-      </a><br>
-    </p>
+
+      <p class="col-sm-8 col-md-8 col-lg-8">Tomate Crevettes Grises – revisitée – // Millefeuille / Persil / Sablé</p>
+         <p><span id="bad1" class="badge col-sm-4 col-md-4 col-lg-4 "> 400€</span><br></p>
+       <p class="col-sm-8 col-md-8 col-lg-8">
+        Foie Gras de Canard – mi-cuit – // Gelée Gingembre / Chutney Airelles / Brioche</p>
+        <p><span id="bad2" class="adge col-sm-4 col-md-4 col-lg-4 ">401€</span></p>
+      </div>
   </div>
     </div>
 
