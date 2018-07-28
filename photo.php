@@ -19,16 +19,16 @@
   <!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="image2.jpg" alt="Cookie">
+      <img src="assets/images/image2.jpg" alt="Cookie">
     </div>
     <div class="carousel-item">
-      <img src="image3.jpg" alt="oui">
+      <img src="assets/images/image3.jpg" alt="oui">
     </div>
     <div class="carousel-item">
-      <img src="image4.jpg" alt="hehe">
+      <img src="assets/images/image4.jpg" alt="hehe">
     </div>
     <div class="carousel-item">
-      <img src="image5.jpg" alt="true">
+      <img src="assets/images/image5.jpg" alt="true">
     </div>
   </div>
 
