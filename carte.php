@@ -5,7 +5,7 @@
    <!-- HEADER -->
    <?php include('assets/includes/header.php'); ?>
    <!-- MAIN -->
-   <!-- <section class="cartouchette"> -->
+
    <div class="container">
    <div class="container-fluid bg-dark text-white" id="entree">
       <h2 class="soustitre">Entrée</h2>
@@ -50,6 +50,6 @@
    </div>
  </div>
    </div>
-   <!-- </section> -->
+
    <!-- FOOTER -->
    <?php include('assets/includes/footer.php'); ?>
