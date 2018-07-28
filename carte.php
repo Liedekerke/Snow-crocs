@@ -1,7 +1,7 @@
 <?php include('assets/includes/head.php'); ?>
 <title>carte</title>
 </head>
-<body>
+<body style="background-color:#1e2226b8 !important;">
    <!-- HEADER -->
    <?php include('assets/includes/header.php'); ?>
    <!-- MAIN -->
