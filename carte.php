@@ -16,8 +16,9 @@
   <!-- <section class="cartouchette"> -->
     <div class="container-fluid bg-dark text-white" id="entree">
       <!-- <div class="row "> -->
+      <div class="row container">
       <h2 class="soustitre">Entrée</h2>
-<div class="row container">
+
       <p class="col-sm-9 col-md-9 col-lg-9">Tomate Crevettes Grises – revisitée – // Millefeuille / Persil / Sablé</p>
          <p class=" col-sm-3 col-md-3 col-lg-3 "><span id="bad1" class="badge"> 400€</span><br></p>
        <p class="col-sm-9 col-md-9 col-lg-9">
