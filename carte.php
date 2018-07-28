@@ -1,4 +1,3 @@
-
 <?php include('assets/includes/head.php'); ?>
 <title>carte</title>
 </head>
@@ -18,8 +17,6 @@
          <p class=" col-sm-3 col-md-3 col-lg-3"><span id="bad2" class="badge ">401€</span></p>
       </div>
    </div>
-
-
    <div class="container-fluid bg-dark text-white" id="plat">
       <h2 class="soustitre">Plat</h2>
       <p class="col-sm-9 col-md-9 col-lg-9">
@@ -30,24 +27,22 @@
          Chicon au Gratin – revisité – // Fruits Secs / Crème de Vieux Bruges
       </p>
       <p class=" col-sm-3 col-md-3 col-lg-3"><span id="bad4" class="badge ">401€</span><br></p>
-        <p class="col-sm-9 col-md-9 col-lg-9">
-      Bavette de
-      Bœuf – Irish Hereford – // Jus Corsé / Béarnaise / Gros Légumes
+      <p class="col-sm-9 col-md-9 col-lg-9">
+         Bavette de
+         Bœuf – Irish Hereford – // Jus Corsé / Béarnaise / Gros Légumes
       </p>
-        <p class=" col-sm-3 col-md-3 col-lg-3 "><span id="bad5" class="badge"> 400€</span></p>
+      <p class=" col-sm-3 col-md-3 col-lg-3 "><span id="bad5" class="badge"> 400€</span></p>
    </div>
-
-
-  <div class="container-fluid bg-dark text-white" id="dessert">
+   <div class="container-fluid bg-dark text-white" id="dessert">
       <h2 class="soustitre">dessert</h2>
       <p class="col-sm-9 col-md-9 col-lg-9">
-      La Merveilleuse Boule Surprise // Chocolat / Bergamote / Calamansi / Meringue
-    </p>
-          <p class=" col-sm-3 col-md-3 col-lg-3"><span id="bad6" class="badge"> 800€</span><br></p>
-          <p class="col-sm-9 col-md-9 col-lg-9">
+         La Merveilleuse Boule Surprise // Chocolat / Bergamote / Calamansi / Meringue
+      </p>
+      <p class=" col-sm-3 col-md-3 col-lg-3"><span id="bad6" class="badge"> 800€</span><br></p>
+      <p class="col-sm-9 col-md-9 col-lg-9">
          Crémeux Chocolat Noir – free gluten & lactose – // Confit Orange / Streusel Noisette
-       </p>
-           <p class=" col-sm-3 col-md-3 col-lg-3"><span id="bad7" class="badge"> 500€</span></p>
+      </p>
+      <p class=" col-sm-3 col-md-3 col-lg-3"><span id="bad7" class="badge"> 500€</span></p>
    </div>
    <!-- </section> -->
    <!-- FOOTER -->
