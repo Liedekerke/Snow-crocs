@@ -19,28 +19,28 @@
   <!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="assets/images/image2.jpg" alt="Cookie">
+      <img src="assets/images/image2.jpg" alt="Cookie" height="500">
       <div class="carousel-caption">
         <h3>Entrée</h3>
         <p>Une explosion de saveur</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="assets/images/image3.jpg" alt="oui">
+      <img src="assets/images/image3.jpg" alt="oui" height="500">
       <div class="carousel-caption">
         <h3>Entrée</h3>
         <p>Une explosion de saveur</p>
       </div
     </div>
     <div class="carousel-item">
-      <img src="assets/images/image4.jpg" alt="hehe">
+      <img src="assets/images/image4.jpg" alt="hehe" height="500">
       <div class="carousel-caption">
         <h3>Plat</h3>
         <p>Une explosion de saveur</p>
       </div
     </div>
     <div class="carousel-item">
-      <img src="assets/images/image5.jpg" alt="true">
+      <img src="assets/images/image5.jpg" alt="true" height="500">
       <div class="carousel-caption">
         <h3>Dessert</h3>
         <p>Une explosion de saveur</p>
