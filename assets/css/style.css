@@ -154,6 +154,12 @@ body {
   position: relative;
   bottom: 100%;
 }
+#resto1{
+  text-align: center;
+}
+#resto2{
+  text-align: center;
+}
 /* CAROUSEL */
 .carousel-inner img {
       width: 100%;
