@@ -1,5 +1,5 @@
 <?php include('assets/includes/head.php'); ?>
-<title>photo</title>
+<title>restaurant</title>
 </head>
 <body style="background-color:#1e2226b8 !important;">
    <!-- HEADER -->
