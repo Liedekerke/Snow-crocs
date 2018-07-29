@@ -6,8 +6,8 @@
    <?php include('assets/includes/header.php'); ?>
    <!-- MAIN -->
 
-
-<div class="row container">
+<div class="container">
+<div class="row">
     <div id="resto1" class="col-lg-6 col-sm-6 col-md-6">
 
       <h1>Snow Crocs</h1>
@@ -29,6 +29,7 @@
       </p>
       <p> H24 7/7</p>
     </div>
+</div>
 </div>
 
 
