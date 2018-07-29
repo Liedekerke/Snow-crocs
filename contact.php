@@ -1,8 +1,6 @@
 <?php include('assets/includes/head.php'); ?>
 <title>Contact</title>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
 </head>
 <body style="background-color:#1e2226b8 !important;">
    <!-- HEADER -->
@@ -12,7 +10,7 @@
    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
    <section id="contact" class="content-section text-center">
-         <div class="contact-section">
+         <div class="container contact-form">
              <div class="container">
                <h2>Contact Us</h2>
                <p>Feel free to shout us by feeling the contact form or visiting our social network sites like Fackebook,Whatsapp,Twitter.</p>
