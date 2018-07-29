@@ -17,7 +17,7 @@
     <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
         matter of hours to help you.</p>
 <div class="container">
-    <div class="row">
+    <div id="contactid" class="row">
 
         <!--Grid column-->
         <div class="col-md-9 mb-md-0 mb-5">
