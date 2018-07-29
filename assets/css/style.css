@@ -167,22 +167,11 @@ body {
 
 
 
-h1,h2,h3 {
-	margin:0 0 35px 0;
-	font-family: 'Patua One', cursive;
-	text-transform: uppercase;
-	letter-spacing:1px;
-}
 
-p{
-	margin:0 0 25px;
-	font-size:18px;
-	line-height:1.6em;
-}
-a{
+#bubu1, #bubu2, #bubu3{
 	color:#26a5d3;
 }
-a:hover,a:focus{
+#bubu1, #bubu2, #bubu3:hover,#bubu1, #bubu2, #bubu3:focus{
 	text-decoration:none;
 	color:#26a5d3;
 }
@@ -190,7 +179,7 @@ a:hover,a:focus{
 #contact{
 	background:#333333;
 	color:#f4f4f4;
-	padding-bottom:80px;
+
 }
 
 textarea.form-control{
