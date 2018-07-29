@@ -165,23 +165,6 @@ body {
 }
 
 
-
-
-
-#bubu1, #bubu2, #bubu3{
-	color:#26a5d3;
-}
-#bubu1, #bubu2, #bubu3:hover,#bubu1, #bubu2, #bubu3:focus{
-	text-decoration:none;
-	color:#26a5d3;
-}
-
-#contact{
-	background:#333333;
-	color:#f4f4f4;
-
-}
-
 textarea.form-control{
     height:100px;
 }
