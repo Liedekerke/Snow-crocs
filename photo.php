@@ -30,21 +30,21 @@
       <div class="carousel-caption">
         <h3>Entrée</h3>
         <p>Une explosion de saveur</p>
-      </div
+      </div>
     </div>
     <div class="carousel-item">
       <img src="assets/images/image4.jpg" alt="hehe" height="500">
       <div class="carousel-caption">
         <h3>Plat</h3>
         <p>Une explosion de saveur</p>
-      </div
+      </div>
     </div>
     <div class="carousel-item">
       <img src="assets/images/image5.jpg" alt="true" height="500">
       <div class="carousel-caption">
         <h3>Dessert</h3>
         <p>Une explosion de saveur</p>
-      </div
+      </div>
     </div>
   </div>
 
