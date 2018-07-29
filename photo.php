@@ -20,15 +20,31 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="assets/images/image2.jpg" alt="Cookie">
+      <div class="carousel-caption">
+        <h3>Entrée</h3>
+        <p>Une explosion de saveur</p>
+      </div>
     </div>
     <div class="carousel-item">
       <img src="assets/images/image3.jpg" alt="oui">
+      <div class="carousel-caption">
+        <h3>Entrée</h3>
+        <p>Une explosion de saveur</p>
+      </div
     </div>
     <div class="carousel-item">
       <img src="assets/images/image4.jpg" alt="hehe">
+      <div class="carousel-caption">
+        <h3>Plat</h3>
+        <p>Une explosion de saveur</p>
+      </div
     </div>
     <div class="carousel-item">
       <img src="assets/images/image5.jpg" alt="true">
+      <div class="carousel-caption">
+        <h3>Dessert</h3>
+        <p>Une explosion de saveur</p>
+      </div
     </div>
   </div>
 
