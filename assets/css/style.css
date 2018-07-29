@@ -160,14 +160,12 @@ body {
 #resto2{
   text-align: center;
 }
-#contact{
-  text-align: center;
+#contactid{
+  margin-bottom: 30px;
 }
 
 
-textarea.form-control{
-    height:100px;
-}
+
 /* CAROUSEL */
 .carousel-inner img {
       width: 100%;
