@@ -7,7 +7,7 @@
    <!-- MAIN -->
 
 
-<div class="container">
+<div class="row container">
     <div id="resto1" class="col-lg-6 col-sm-6 col-md-6">
 
       <h1>Snow Crocs</h1>
