@@ -163,7 +163,11 @@ body {
 #contactid{
   margin-bottom: 30px;
 }
+/* BG-MENU */
+#bg-menu {
+   background-repeat:no-repeat;
 
+}
 
 
 /* CAROUSEL */

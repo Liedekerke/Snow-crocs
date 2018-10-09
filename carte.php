@@ -2,7 +2,7 @@
 <title>carte</title>
 </head>
 <!-- <body style="background-color:#1e2226b8 !important;"> -->
-<body style="background-image: url('assets/images/imgtest/bg-menus.jpg');">
+<body id="bg-menu" style="background-image: url('assets/images/imgtest/bg-menus.jpg' );">
 
    <!-- HEADER -->
    <?php include('assets/includes/header.php'); ?>
