@@ -18,7 +18,7 @@
 </div>
 
 
-<div class="container-fluid container-dark hidden" style="border-bottom: 24px solid #353333;padding-bottom:15px;">
+<div class="container-fluid container-dark hidden" style="border-bottom: 24px solid #212529;padding-bottom:15px;">
   <div class="container">
     <div class="row" id="row-dk">
       <div class="col-6 col-md-3">

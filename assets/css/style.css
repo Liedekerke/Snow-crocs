@@ -127,9 +127,9 @@ footer {
 /* DARK */
 
 .container-dark {
-  background: #353333 !important;
+  background: #212529 !important;
   padding-top: 1rem;
-  border-top: 24px solid #353333 !important ;
+  border-top: 24px solid #212529 !important ;
   border-bottom: 24px solid black;
 }
 
