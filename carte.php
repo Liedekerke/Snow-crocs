@@ -2,7 +2,7 @@
 <title>carte</title>
 </head>
 <!-- <body style="background-color:#1e2226b8 !important;"> -->
-<body class="html front not-logged-in no-sidebars page-node i18n-nl"style="background-image: url();">
+<body class="html front not-logged-in no-sidebars page-node i18n-nl"style="background-image: url('images/imgtest/imgPain.jng');">
 
    <!-- HEADER -->
    <?php include('assets/includes/header.php'); ?>
