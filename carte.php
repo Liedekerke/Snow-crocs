@@ -7,7 +7,7 @@
    <!-- HEADER -->
    <?php include('assets/includes/header.php'); ?>
    <!-- MAIN -->
-   <iframe src="/sites/all/themes/seagrill/intro.php" id="contentFrame" frameborder="0" seamless="seamless" scrolling="no"></iframe>
+   <iframe src="images/imgtest/imgPain.jng" id="contentFrame" frameborder="0" seamless="seamless" scrolling="no"></iframe>
    <!-- <iframe src="/sites/all/themes/seagrill/player.html" id="playerFrame"  frameborder="0" seamless="seamless" scrolling="no" allowtransparency="true"></iframe>   -->
 
    <div class="container">
