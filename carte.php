@@ -53,6 +53,6 @@
    </div>
  </div>
    </div>
-
+</body>
    <!-- FOOTER -->
    <?php include('assets/includes/footer.php'); ?>
