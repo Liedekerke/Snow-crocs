@@ -166,7 +166,7 @@ body {
 /* BG-MENU */
 #bg-menu {
    background-repeat:no-repeat;
-
+   background-size: cover;
 }
 
 
