@@ -169,6 +169,14 @@ body {
    background-size: cover;
 }
 
+/* GRID */
+.item1{
+  grid-area: header;
+}
+.grid-caontainer{
+  display:grid;
+  grid-template-areas: 'header header header header header header';
+}
 
 /* CAROUSEL */
 .carousel-inner img {
