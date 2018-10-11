@@ -8,9 +8,9 @@
    <?php include('assets/includes/header.php'); ?>
    <!-- MAIN -->
    <!-- <iframe src="assets/images/imgtest/bg-menus.jpg" id="contentFrame" frameborder="0" seamless="seamless" scrolling="no"></iframe> -->
-
-   <div  class="grid-container">
-     <div class="item1">
+<div class="container">
+   <!-- <div  class="grid-container"> -->
+     <!-- <div class="item1"> -->
    <div class="container-fluid bg-dark text-white" id="entree">
       <h2 class="soustitre">Entrée</h2>
       <div class="row container">
@@ -54,7 +54,7 @@
    </div>
  </div>
    </div>
-</div>
+
    <!-- FOOTER -->
 
      <footer>
