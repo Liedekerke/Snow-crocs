@@ -11,7 +11,7 @@
 <div class="container">
    <!-- <div  class="grid-container"> -->
      <!-- <div class="item1"> -->
-   <div class="container-fluid bg-dark text-white" id="entree">
+   <div class="container-fluid text-white" id="entree">
       <h2 class="soustitre">Entrée</h2>
       <div class="row container">
          <p class="col-sm-9 col-md-9 col-lg-9">Tomate Crevettes Grises – revisitée – // Millefeuille / Persil / Sablé</p>
@@ -22,7 +22,7 @@
          <p class=" col-sm-3 col-md-3 col-lg-3"><span id="bad2" class="badge ">401€</span></p>
       </div>
    </div>
-   <div class="container-fluid bg-dark text-white" id="plat">
+   <div class="container-fluid text-white" id="plat">
       <h2 class="soustitre">Plat</h2>
             <div class="row container">
       <p class="col-sm-9 col-md-9 col-lg-9">
@@ -40,7 +40,7 @@
       <p class=" col-sm-3 col-md-3 col-lg-3 "><span id="bad5" class="badge"> 400€</span></p>
    </div>
    </div>
-   <div class="container-fluid bg-dark text-white" id="dessert">
+   <div class="container-fluid text-white" id="dessert">
       <h2 class="soustitre">dessert</h2>
             <div class="row container">
       <p class="col-sm-9 col-md-9 col-lg-9">
@@ -56,38 +56,4 @@
    </div>
 
    <!-- FOOTER -->
-
-     <footer>
-     <div class="main-footer">
-       <p id="copiriri"> <span class="glyphicon glyphicon-copyright-mark"></span> Copyright- Nicolas de Liedekerke </p>
-     </div>
-   </footer>
-
-   <script type="text/javascript">
-       jarallax(document.querySelectorAll('.jarallax'));
-       jarallax(document.querySelectorAll('.jarallax-keep-img'), {
-           keepImg: true,
-       });
-   </script>
-
-
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-
-
-
-   <script>
-     if ('serviceWorker' in navigator) {
-       window.addEventListener('load', function() {
-         navigator.serviceWorker.register('service-worker.js').then(function(registration) {
-           // Registration was successful
-           console.log('ServiceWorker registration successful with scope: ', registration.scope);
-         }, function(err) {
-           // registration failed :(
-           console.log('ServiceWorker registration failed: ', err);
-         });
-       });
-     }
-   </script>
-
-   </body>
-   </html>
+   <?php include('assets/includes/footer.php'); ?>
