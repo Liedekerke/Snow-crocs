@@ -2,13 +2,13 @@
 <title>carte</title>
 </head>
 <!-- <body style="background-color:#1e2226b8 !important;"> -->
-<body id="bg-menu" style="background-image: url('assets/images/imgtest/bg-menus.jpg' );">
+<body>
 
    <!-- HEADER -->
    <?php include('assets/includes/header.php'); ?>
    <!-- MAIN -->
    <!-- <iframe src="assets/images/imgtest/bg-menus.jpg" id="contentFrame" frameborder="0" seamless="seamless" scrolling="no"></iframe> -->
-<div class="container">
+<div class="container"  id="bg-menu" style="background-image: url('assets/images/imgtest/bg-menus.jpg' );">
    <!-- <div  class="grid-container"> -->
      <!-- <div class="item1"> -->
    <div class="container-fluid text-white" id="entree">
